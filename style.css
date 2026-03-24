@@ -1,0 +1,659 @@
+/* Universal selector,
+removes top-left white border,
+sets the entire website and all its content at the horizontal center of the window screen
+unless you state it otherwise on other elements via margin property */
+* {
+    margin: 0;
+}
+
+/* Passes the CSS3 Validator Check. Link: https://jigsaw.w3.org/css-validator/ */
+html{
+    scroll-behavior: smooth;
+}
+
+/***************************************************************************
+    Colours, commonly used colours (e.g. theme colours) stored as variables
+****************************************************************************/
+:root {
+    --primary-00: #6e07f3; /* Primary light theme colour */
+    --primary-01: #5c04cc;
+    --primary-02: #4b04a6;
+    --secondary-00: #fff; /* Secondary light theme colour */
+    --secondary-01: #ccc;
+    --bg-header: #fffa;
+    --bg-main: #fff;
+    --body: #000;
+    --card-outline: #000;
+    --card-outline-hover: #333;
+    --code-bg: #ccc;
+    --code-body: #606;
+    --w: white;
+    --g: #7f7f7f;
+    --b: black;
+    --dr: darkred;
+    --odb: olivedrab;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --primary-00: #59a404; /* Primary dark theme colour */
+        --primary-01: #6fcc04;
+        --primary-02: #85f208;
+        --secondary-00: #b5fa66; /* Secondary dark theme colour */
+        --bg-header: #030500aa;
+        --bg-main: #030500;
+        --body: #fff;
+        --card-outline: #59a404;
+        --card-outline-hover: #b5fa66;
+        --code-bg: #333;
+        --code-body: #0f0;
+    }
+}
+/* END OF */
+
+/**************************************************************************************
+  LAYOUT, see responsive design-related declarations in 'desktop.css' and 'mobile.css'
+***************************************************************************************/
+
+body {
+    background-color: var(--primary-00);
+    color: var(--body);
+}
+
+.container *{
+    margin: 0 auto;
+}
+
+/* Sidebar: contains <aside> with nested <nav> */
+
+aside {
+    grid-area: aside;
+    background-color: var(--primary-00);
+    color: var(--w);
+}
+
+.navbar {
+    background-color: var(--primary-00);
+}
+
+nav > * {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li:hover:not(:last-child){
+    background-color: var(--primary-02);
+}
+
+nav ul li:nth-last-child(2):not(nav ul li ul li){
+    /* background-color: var(--primary-00); */
+    visibility: hidden;
+}
+
+nav > ul > li:hover ul{
+    background-color: var(--primary-01);
+}
+
+nav ul li ul li:hover {
+    background-color: var(--primary-02);
+}
+
+/* Background video: Goes behind the <header> */
+/* If you set your system color theme to 'light', */
+/* the light version of the video appears, */
+.bg-video-light {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .5;
+} /* (Coyier, 2017) */
+
+/* while the dark version disappears. */
+.bg-video-dark {
+    display: none;
+}
+
+/* Header: contains the title and subtitle of a page */
+
+header {
+    grid-area: header;
+    position: relative;
+    background-color: var(--bg-header);
+    color: var(--body);
+    padding: 3rem;
+}
+
+/* Main: contains the needed content for a page */
+
+main {
+    grid-area: main;
+    background-color: var(--bg-main);
+    color: var(--body);
+}
+
+.section-content ~ section:has(h2) {
+    padding: 2rem 3rem 0;
+}
+
+section{
+    padding: 9rem 3rem 0;
+}
+
+main > .section-content:last-child{
+    padding: 0 3rem 9rem;
+}
+
+/* Cards and .card-grid styling */
+.card-grid{
+    padding: 2.5rem 0 0;
+}
+
+.card-grid .card figure, .figure-in-card{
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-sizing: border-box;
+} /* (Farley, 2022) */
+
+.figure-in-card{
+    display: block;
+    background-color: var(--b);
+    color: var(--w);
+    border: .2rem solid var(--card-outline);
+}
+
+.project-card:nth-child(4n) .figure-in-card{
+    background-color: var(--odb);
+}
+
+.project-card:nth-child(4n+1) .figure-in-card{
+    background-color: var(--w);
+}
+
+.project-card:nth-child(4n+2) .figure-in-card{
+    background-color: var(--b);
+}
+
+.project-card:nth-child(4n+3) .figure-in-card{
+    background-color: var(--dr);
+}
+
+.project-card .overlay{
+    width: 100%;
+    height: 100%;
+    background-color: hsl(from var(--primary-00) h s l / 0.9375); /* (Coyier, 2021) */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: var(--w);
+} /* (Farley, 2022) */
+
+.post-preview-card figure{
+    background-color: var(--bg-main);
+    color: var(--body);
+    height: 100%;
+    width: 100%;
+    outline: .2rem solid var(--card-outline);
+} /* (Farley, 2022) */
+
+/* Footer: contains links to social media, cookies and privacy policy,
+and a copyright watermark (mobile-only). */
+
+footer {
+    grid-area: footer;
+    background-color: var(--primary-00);
+    color: var(--w);
+    padding: 3rem;
+}
+
+.footer-row-col, .form-row-col, .contact-form-row-col,
+.form-row.col2 .form-row-col,
+.contact-form-row.col2 .contact-form-row-col{
+    padding: 0;
+}
+
+.social-media-links{
+    padding-bottom: 3rem;
+}
+
+/* Classes only found in index.html */
+
+.testimonials-list{
+    padding: 2.5rem 0 0;
+}
+
+.testimonial-li {
+    list-style-type: none;
+    margin-bottom: 3rem;
+}
+
+/* Classes only found in videoDemo.html */
+
+.video-frame{
+    max-width:800px;
+}
+
+.video-frame div{
+    position:relative;
+    padding-bottom:63.75%;
+}
+
+.video-frame div iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border:0;
+}
+
+iframe{
+    border: .2rem solid var(--primary-00);
+}
+
+.section-content .video-frame {
+    margin-top: 2rem;
+}
+
+/* .word-document specific classes, only in report.html */
+
+.framed{
+    border: .1rem solid var(--g);
+}
+
+.framed > *, .frameless > * {
+    padding: .5rem;
+}
+
+.picture-left {
+    margin: 0 .8rem .6rem 0;
+    clear: left;
+    float: left;
+}
+
+.picture-left:has(~ ul), .picture-left:has(~ ol) {
+    margin: 0 3rem .6rem 0;
+}
+
+.picture-right {
+    margin: 0 0 .6rem .8rem;
+    clear: right;
+    float: right;
+}
+
+.picture-left, .picture-right{
+    width: min-content;
+}
+
+.picture-center{
+    width: max-content;
+    clear:both;
+    float: none;
+}
+
+.image-list-3{
+    display: grid;
+    list-style-type: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+    width: 100%;
+    column-gap: 2rem;
+}
+
+.image-list-3 li{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+/* END OF */
+
+/*************************************************************
+                        TEXT CONTENT
+*************************************************************/
+a {
+    color: var(--w);
+}
+
+nav ul li a {
+    color: var(--w);
+}
+
+nav ul li a:not(.btn-contact) {
+    display: inline-block;
+    width: 50%;
+}
+
+nav ul li ul li a{
+    width: 80% !important;
+}
+
+.bio{
+    color: var(--primary-00);
+}    
+
+article {
+    background-color: var(--w);
+    border: 1px inset var(--b);
+    
+}
+
+p {
+    padding-bottom: 1.2em;
+}
+
+p a{
+    color: var(--primary-02);
+}
+
+code{
+    background-color: var(--code-bg);
+    color: var(--code-body);
+    border-radius: .2rem;
+    padding: 0 .2rem;
+}
+
+.section-content{
+    padding: 0 3rem;
+}
+
+.card-grid .card figcaption, .project-caption {
+    padding: 0rem 2rem;
+    z-index: 1;
+}
+
+.project-caption {
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    width: stretch;
+    color: var(--w);
+}
+
+.post-title{
+    text-wrap: wrap;
+    padding-bottom: .8rem;
+}
+
+.post-preview-desc, .project-desc{
+    text-wrap: wrap;
+    padding-bottom: 1.2rem;
+}
+
+.social-media-link {
+    color: var(--w);
+}
+
+/* Used for elements using the up-and-down animation, see animation.css */
+.up-and-down{
+    display: inline-block;
+}
+
+/* Classes only found in index.html */
+
+.testimonial-li-content {
+    border: .2rem solid var(--card-outline);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+/* Classes only found in contact.html */
+
+.form-label {
+    padding: 0;
+    margin: 0;
+}
+
+/* Asterisk (*) used on labels for required fields in the contact form */
+.form-required-asterisk{
+    color: red;
+}
+
+fieldset {
+    display: block;
+    margin-inline: 0;
+    border: none;
+    padding-block: 0;
+    padding-inline: 0;
+}
+
+/* .word-document and other related elements and classes,
+only in report.html */
+
+.word-document{
+    padding: 6rem;
+}
+
+.word-document section, .word-document section + .section-content,
+.word-document section + .section-content ~ section:has(h2) {
+    padding: 0;
+    line-height: 1.5;
+}
+
+.heading, .heading-2, .heading-3{
+    color: #0F4761;
+}
+
+section + section > .heading, .section-content + section > .heading{
+    padding-top: 3rem;
+}
+
+.word-document a{
+    color: #00A7FF;
+    text-decoration: underline;
+}
+
+.normal, .list{
+    color: var(--b);
+    padding-bottom: 1.2em;
+}
+
+.list{
+    margin-left: .3rem;
+    margin-inline-start:  .3rem;
+}
+
+.picture-left > figcaption, .picture-center > figcaption, .picture-right > figcaption{
+    margin: 0;
+    border-top: .1em solid var(--g);
+    color: var(--b);
+}
+/* END OF */
+
+/*************************************************************
+                            INPUT
+*************************************************************/
+
+/* Buttons, using <a> tag, not <button> */
+
+.btn {
+    display: inline-block;
+    padding: .5rem;
+    border-radius: 100px;
+}
+
+.btn.nav-button-show, .btn.nav-button-hide {
+    height: 0.8rem;
+    width: 1.25rem;
+    padding: 0;
+    display: none;
+    border-top: 0.2rem solid var(--w);
+    border-bottom: 0.2rem solid var(--w);
+    border-radius: 0.2rem;
+}
+
+.btn.nav-button-show::before, .btn.nav-button-hide::before {
+    padding: 0;
+    margin: 0;
+    content: '';
+    position: absolute;
+    width: 1.25rem;
+    margin: 0.3rem -.625rem 0;
+    border-top: 0.2rem solid var(--w);
+}
+
+.btn-contact{
+    border: .2rem solid var(--w);
+    border-radius: 1rem;
+    padding: .75rem;
+    box-shadow: hsl(from var(--b) h s l / 0.14) 0px -23px 25px 0px inset, hsl(from var(--b) h s l / 0.11) 0px -36px 30px 0px inset, hsl(from var(--b) h s l / 0.07) 0px -79px 40px 0px inset, hsl(from var(--b) h s l / 0.03) 0px 1px 1px, hsl(from var(--b) h s l / 0.06) 0px 2px 2px, hsl(from var(--b) h s l / 0.06) 0px 8px 4px, hsl(from var(--b) h s l / 0.06) 0px 8px 8px, hsl(from var(--b) h s l / 0.06) 0px 16px 19px; /* (Coyier, 2021)(CSS Scan, n.d.) */
+}
+
+.btn-contact-current-page{
+    user-select: none;
+}
+
+.btn-contact:hover, .btn-contact-current-page{
+    border-color: var(--secondary-01);
+    color: var(--secondary-01);
+}
+
+.btn-scroll-to-top{
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    background-color: var(--primary-00);
+    width: 2.5rem;
+    height: 2.5rem;
+    box-shadow: hsl(from var(--b) h s l / 0.14) 0px -23px 25px 0px inset, hsl(from var(--b) h s l / 0.11) 0px -36px 30px 0px inset, hsl(from var(--b) h s l / 0.07) 0px -79px 40px 0px inset, hsl(from var(--b) h s l / 0.03) 0px 1px 1px, hsl(from var(--b) h s l / 0.06) 0px 2px 2px, hsl(from var(--b) h s l / 0.06) 0px 8px 4px, hsl(from var(--b) h s l / 0.06) 0px 8px 8px, hsl(from var(--b) h s l / 0.06) 0px 16px 19px; /* (Coyier, 2021)(CSS Scan, n.d.) */
+} /* (Schneider, 2024) */
+
+.btn-scroll-to-top:hover{
+    box-shadow: hsl(from var(--w) h s l / 0.10) 0px -23px 25px 0px inset, hsl(from var(--w) h s l / 0.07) 0px -36px 30px 0px inset, hsl(from var(--w) h s l / 0.03) 0px -79px 40px 0px inset, hsl(from var(--w) h s l / 0.01) 0px 1px 1px, hsl(from var(--w) h s l / 0.02) 0px 2px 2px, hsl(from var(--w) h s l / 0.02) 0px 8px 4px, hsl(from var(--w) h s l / 0.02) 0px 8px 8px, hsl(from var(--b) h s l / 0.02) 0px 16px 19px; /* (Coyier, 2021)(CSS Scan, n.d.) */
+}
+
+.btn-scroll-to-top a{
+    fill: var(--w);
+    height: 100%;
+    width: 100%;
+    pointer-events:painted;
+}
+
+.btn.is-visit, .btn.is-project-or-post{
+    background-color: var(--primary-01);
+    border: .2rem solid var(--primary-02);
+    box-shadow: hsl(from var(--b) h s l / 0.14) 0px -23px 25px 0px inset, hsl(from var(--b) h s l / 0.11) 0px -36px 30px 0px inset, hsl(from var(--b) h s l / 0.07) 0px -79px 40px 0px inset, hsl(from var(--b) h s l / 0.03) 0px 1px 1px, hsl(from var(--b) h s l / 0.06) 0px 2px 2px, hsl(from var(--b) h s l / 0.06) 0px 8px 4px, hsl(from var(--b) h s l / 0.06) 0px 8px 8px, hsl(from var(--b) h s l / 0.06) 0px 16px 19px; /* (Coyier, 2021)(CSS Scan, n.d.) */
+}
+
+.btn.is-visit:hover, .btn.is-project-or-post:hover{
+    background-color: var(--primary-00);
+}
+
+/* Contact form-related rules, only on contact.html */
+
+.form-input{
+    width: 100%;
+    padding: .5rem;
+    color: var(--body) !important;
+}
+
+.form-radio-option{
+    margin: 0;
+}
+
+.form-radio > .form-radio-option:nth-child(3){
+    margin:0 1rem;
+}
+
+textarea.form-input{
+    min-height: 7.5rem;
+    max-width: 100%;
+}
+
+input[type="submit"]{
+    border-radius: 12px;
+    border: none;
+    background-color: var(--primary-00);
+    color: var(--w);
+    padding: .5rem;
+    border: .2rem solid var(--primary-02);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, hsl(from var(--b) h s l / 0.3) 0px 18px 36px -18px inset; /* (Coyier, 2021)(CSS Scan, n.d.) */
+}
+/* END OF */
+
+/*************************************************************
+                        MEDIA CONTENT
+*************************************************************/
+
+/* Images */
+
+.is-3by2, .is-16by9{
+    height: 100%;
+}
+
+.is-3by2 img, .is-16by9 img {
+    max-width: 100%;
+}
+
+.is-3by2 img{
+    aspect-ratio: 1.5;
+} /* (Farley, 2022) */
+
+.is-16by9 img{
+    aspect-ratio: calc(16 / 9);
+}
+
+/* Icons */
+
+.icon {
+    display: inline-block;
+    user-select: none;
+}
+
+.icon-rchevron{
+    margin-left: .2em;
+}
+
+.icon-star, .icon-star50{
+    background-image: url(media/img/1x1-testimonial-star-32px.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:left;
+    margin: .2em;
+    height: 2rem;
+    color: transparent;
+} /* (Abasi, 2025b) */
+
+/* This can be adjusted to fractions of 2rem, e.g. .5rem for a quarter of a star ... */
+.icon-star {
+    width: 2rem;
+} /* (Abasi, 2025b) */
+
+/* ... Like in this example. */
+.icon-star50{
+    /* Cuts a star in half */
+    width: 1rem;
+} /* (Abasi, 2025b) */
+
+.star-rating5 {
+    display: inline-block;
+} /* (Abasi, 2025b) */
+
+/* .word-document specific class, only in report.html */
+
+.is-picture{
+    height: 5rem;
+    padding: 0;
+    margin: 0;
+}
+
+/* 150% of 5rem, original height for all .word-document pictures */
+.is-picture-150 {
+    height: 7.5rem;
+}
+
+/* 200% of 5rem, original height for all .word-document pictures */
+.is-picture-200 {
+    height: 10rem;
+}
+/* END OF */

@@ -1,0 +1,155 @@
+/* Importing fonts 'Rethink Sans' and 'Roboto' */
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*************************************************************
+                            LAYOUT
+**************************************************************/
+body {
+    font-size: 1em;
+    font-family: 'Roboto', Arial, Helvetica, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+/* Sidebar */
+
+nav {
+    font-style: italic;
+}
+
+nav > ul > li:hover ul {
+    font-style: normal;
+}
+
+/* Main */
+
+main {
+    text-align: left;
+}
+
+/*************************************************************
+                        TEXT CONTENT
+*************************************************************/
+a {
+    text-decoration: none;
+}
+
+nav ul li a, nav ul li span {
+    font-style: normal;
+}
+
+.logo{
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6, .logo {
+    font-family: 'Rethink Sans', 'Roboto', Arial, Helvetica, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+}
+
+h1, .logo {
+    font-size: 3rem;
+}
+
+
+h2{
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+.tagline {
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+p {
+    font-size: 1rem;
+    text-align: left;
+}
+
+.copyright-notice-aside, .copyright-notice-footer {
+    text-align: center;
+}
+
+.card-grid .card figure {
+    text-align: center;
+}
+
+.projects .project-card .figure-in-card {
+    text-align: center;
+}
+
+.post-title {
+    font-size: 1.5rem;
+}
+
+.post-preview-desc, .project-desc {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.social-media-link {
+    font-size: 5rem;
+}
+
+/* Classes only found in index.html */
+
+.testimonials-list {
+    text-align: center;
+}
+
+/* .word-document specific classes, only in report.html */
+
+.word-document,
+.word-document h1, .word-document h2, .word-document h3,
+.word-document h4, .word-document h5, .word-document h6,
+.word-document p{
+    font-family: 'Aptos', 'Calibri', 'Trebuchet MS', sans-serif !important;
+}
+
+.word-document figcaption{
+    font-size: .8rem;
+    line-height: initial;
+}
+
+.normal, .list{
+    overflow-wrap: anywhere;
+}
+
+.heading, .heading-2, .heading-3{
+    font-weight: normal;
+}
+
+.heading{
+    font-size: 2rem;
+}
+
+.heading-2{
+    font-size: 1.5rem;
+}
+
+.heading-3{
+    font-size: 1.25rem;
+}
+
+.italic{
+    font-style: italic;
+}
+
+/*************************************************************
+                            INPUT
+*************************************************************/
+/* Contact form-related rules, only on contact.html */
+.form-input {
+    font-family: 'Roboto';
+}
+
+.form-required-asterisk {
+    font-family: 'Rethink Sans';
+    font-weight: bold;
+}
+
+input[type="submit"] {
+    font-family: 'Rethink Sans';
+}

@@ -1,0 +1,281 @@
+/*************************************************************
+  LAYOUT, see responsive versions of this in 'responsive.css'
+**************************************************************/
+
+/* Containers: contains grid layout and sizing */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "aside content-container";
+    width: 100%;
+}
+
+.content-container {
+    display: grid;
+    grid-area: content-container;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    width: 100%;
+}
+
+nav, header, main,
+aside, footer {
+    padding: 1rem;
+    width: stretch;
+}
+
+/* Sidebar, replaces the mobile navbar */
+
+aside {
+    position: fixed;
+    height: 100vh;
+    width: 20%;
+    padding: 0;
+    z-index: 2;
+} /* (Jakemmarsh and Daniel, 2013) */
+
+.navbar{
+    padding-top: 2.5rem;
+}
+
+nav {
+    grid-area: nav;
+    background-color: inherit;
+    color: inherit;
+    padding: 0;
+}
+
+nav > ul > li {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+nav > ul > li > ul {
+    position: absolute;
+    display: block;
+    left: 0;
+    top:0;
+    width: 100%;
+    padding: 0;
+    opacity: 0;
+    pointer-events: none; /* Sub-menus become uninteractive for the visitor */
+    color: var(--w);
+    z-index: -2;
+}
+
+nav > ul > li:hover > ul{
+    display: block;
+    opacity: 1;
+    pointer-events: auto; /* Sub-menus become interactive for the visitor */
+    color: var(--w);
+}
+
+nav > ul > li:hover ul li {
+    margin:0;
+    padding: 1rem;
+}
+
+nav ul li:nth-last-child(2):not(nav ul li ul li){
+    padding: 2rem 0;
+    color: transparent;
+}
+
+/* Header */
+
+header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 4rem;
+}
+
+/* Main content */
+
+.card-grid, .card-grid.projects, .card-grid.posts{
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2.5rem 2.5rem 0 0;
+    column-gap: 1.5em;
+    row-gap: 1.5em;
+}
+
+.card, .project-card, .post-preview-card{
+    flex: none;
+} /* (Farley, 2022) */
+
+.card-grid, .card-grid.projects, .card-grid.posts{
+    display: grid;
+}
+
+.card-grid .card .overlay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: stretch;
+} /* (Farley, 2022) */
+
+/* Footer */
+
+.footer-row{
+    padding: 3rem;
+}
+
+.social-media-links, .necessary-links{
+    list-style-type: none;
+    display: flex;
+}
+
+/* Classes only found in contact.html */
+
+.form, .contact-form{
+    display: grid;
+    width:100%;
+    row-gap: 1em;
+}
+
+.form-row, .contact-form-row{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-row-col, .contact-form-row-col, .form-row.col2 .form-row-col, .contact-form-row.col2 .contact-form-row-col{
+    padding: 0;
+}
+
+.form-row.col2, .contact-form-row.col2{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: space-between;
+} /* (Abasi, 2025a) */
+
+.form-row.col2 .form-row-col, .contact-form-row.col2 .contact-form-row-col{
+    flex: 0 0 auto;
+    width: 45%;
+    margin: 0;
+} /* (Abasi, 2025a) */
+
+/* Classes only found in report.html */
+
+@media screen and (max-width:1492px) {
+    .word-document .list.image-list-3:has(.image.is-16by9 img.is-picture.is-picture-200){
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .word-document .list.image-list-3:has(.image.is-16by9 img.is-picture.is-picture-200) li:nth-child(2n+1):is(:last-child){
+        grid-column: 1 / 3;
+    }
+
+}
+
+@media screen and (max-width:1458px){
+    .word-document .list.image-list-3:has(img.is-picture.is-picture-200){
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .word-document .list.image-list-3:has(img.is-picture.is-picture-200) li:nth-child(2n+1):is(:last-child){
+        grid-column: 1 / 3;
+    }
+}
+
+@media screen and (max-width:1080px) {
+    .word-document .list.image-list-3:has(img.is-picture.is-picture-200),
+    .word-document .list.image-list-3:has(.image.is-16by9 img.is-picture.is-picture-200){
+        grid-template-columns: 1fr;
+    }
+
+    .word-document .list.image-list-3:has(img.is-picture.is-picture-150, img.is-picture.is-picture-200) li:nth-child(2n+1):is(:last-child){
+        grid-column: unset !important;
+    }
+
+    .word-document .list.image-list-3 img.is-picture.is-picture-150, .word-document .list.image-list-3 img.is-picture.is-picture-200 {
+        width: 100%;
+        height: auto !important;
+    }
+}
+/* END OF */
+
+/*************************************************************
+                         TEXT CONTENT
+*************************************************************/
+/* Keep this rule until you find a better solution - 
+   this fixes the padding issue with the navbar when
+   transitioning from mobile to desktop
+   (affects screens with 1024px width, e.g. iPad Pro). */
+@media screen and (min-width:1025px) {
+    .navbar h1{
+        padding: 1.5rem 0;
+    }
+}
+
+.copyright-notice-aside {
+    display: block;
+}
+
+.copyright-notice-footer {
+    display: none;
+}
+
+.card-grid .card figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: stretch;
+} /* (Farley, 2022) */
+
+/* Classes only found in contact.html */
+
+label{
+    display: inline-block;
+}
+/* END OF */
+
+/*************************************************************
+                            INPUT
+*************************************************************/
+/* Buttons */
+.btn.is-project-or-post{
+    grid-column-start: 2;
+}
+
+/* Classes only found in contact.html */
+
+.form-radio-option{
+    display: inline-block;
+}
+
+/* Adjusting the form based on width of desktop screen due to text overflow */
+@media screen and (max-width:1264px) {
+    .form-radio{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-radio-option{
+        display: block;
+    }
+    
+    .form-radio > .form-radio-option:nth-child(3){
+        margin:0;
+    }
+}
+/* END OF */
+
+/*************************************************************
+                        MEDIA CONTENT
+*************************************************************/
+/* Classes only found in index.html */
+.testimonial-sender-photo {
+    height: 16rem;
+}
+/* END OF */

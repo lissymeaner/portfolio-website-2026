@@ -1,0 +1,437 @@
+/***************************************************************************
+    Colours, commonly used colours (e.g. theme colours) stored as variables
+****************************************************************************/
+:root {
+    --primary-00: #6e07f3; /* Primary light theme colour */
+    --primary-01: #5c04cc;
+    --primary-02: #4b04a6;
+    --secondary-00: #fff; /* Secondary light theme colour */
+    --secondary-01: #ccc;
+    --bg-header: #fffa;
+    --bg-main: #fff;
+    --body: #000;
+    --card-outline: #000;
+    --card-outline-hover: #333;
+    --code-bg: #ccc;
+    --code-body: #606;
+    --w: white;
+    --g: #7f7f7f;
+    --b: black;
+    --dr: darkred;
+    --odb: olivedrab;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --primary-00: #59a404; /* Primary dark theme colour */
+        --primary-01: #6fcc04;
+        --primary-02: #85f208;
+        --secondary-00: #b5fa66; /* Secondary dark theme colour */
+        --bg-header: #030500aa;
+        --bg-main: #030500;
+        --body: #fff;
+        --card-outline: #59a404;
+        --card-outline-hover: #b5fa66;
+        --code-bg: #333;
+        --code-body: #0f0;
+    }
+}
+/* END OF */
+
+/*************************************************************
+    LAYOUT, see the desktop version of this in 'desktop.css'
+**************************************************************/
+
+/* Containers: contains grid layout and sizing */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.content-container {
+    display: grid;
+    grid-area: content-container;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    width: 100%;
+}
+
+nav, header, main,
+aside, footer {
+    padding: 1rem;
+    width: stretch;
+}
+
+/* Navbar, replaces the desktop sidebar */
+
+aside {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    z-index:3;
+}
+
+nav {
+    grid-area: nav;
+    background-color: inherit;
+    color: inherit;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    position:static;
+    padding: unset;
+    justify-content:space-around;
+}
+
+#home_nav:hover a:not(#home_nav ul li a), #home_nav:hover span,
+#report_nav:hover a:not(#report_nav ul li a), #report_nav:hover span{
+    padding-bottom: 2.25rem;
+    display: inline-block;
+}
+
+nav ul li:not(nav ul li ul li):not(:last-child) {
+    display: block;
+    padding: 2.5rem 0 2.5rem 0;
+    border-top: .1rem solid var(--primary-01);
+}
+
+nav > ul > li > ul{
+    display: none;
+    position: relative;
+    transition: none;
+    opacity: unset;
+    pointer-events: auto;
+    z-index: unset;
+}
+
+nav > ul > li:hover > ul
+{
+    display: block;
+    left:0 !important;
+    border-top: .1rem solid var(--w);
+    border-bottom: .1rem solid var(--w);
+}
+
+nav ul li:hover ul li {
+    margin:0;
+    padding: .75rem;
+}
+
+nav ul li:nth-last-child(2):not(nav ul li ul li){
+    padding: 1rem 0;
+    color: transparent;
+}
+
+/* Background video */
+
+.bg-video-light, .bg-video-dark {
+    height: calc(85vh + 10rem) !important;
+}
+
+/* Header */
+
+header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height:85vh;
+    padding: 3rem 4rem;
+}
+
+/* Main content */
+
+.card-grid, .card-grid.projects, .card-grid.posts{
+    grid-template-columns: 1fr 1fr;
+    padding: 2.5rem 0 0;
+    column-gap: 1.5em;
+    row-gap: 1.5em;
+}
+
+.card, .project-card, .post-preview-card{
+    flex: none;
+} /* (Farley, 2022) */
+
+.card-grid .card .overlay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: stretch;
+} /* (Farley, 2022) */
+
+/* Footer */
+
+.footer-row{
+    padding: 3rem;
+}
+
+.social-media-links, .necessary-links{
+    list-style-type: none;
+    display: flex;
+}
+
+/* Classes only found in contact.html */
+
+.form, .contact-form{
+    display: grid;
+    width: 100%;
+    row-gap: 1em;
+}
+
+.form-row, .contact-form-row{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Classes only found in report.html */
+
+.word-document{
+    padding: 6rem;
+}
+/* END OF */
+
+/*************************************************************
+                        TEXT CONTENT
+*************************************************************/
+
+.card-grid .card figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: stretch;
+} /* (Farley, 2022) */
+
+.copyright-notice-aside {
+    display: none;
+}
+
+.copyright-notice-footer {
+    display: block;
+}
+
+label{
+    display: inline-block;
+}
+/* END OF */
+
+/*************************************************************
+                            INPUT
+*************************************************************/
+/* Navbar */
+
+/* Hamburger button functionality */
+/* Default states of each class */
+#home .nav-button-show{
+    display: block;
+}
+
+#home .nav-button-hide{
+    display: none;
+}
+
+#home nav{
+    display: block;
+}
+
+/* States of each class when the navigation menu appears */
+#home:target .nav-button-show {
+    display: none;
+}
+
+#home:target .nav-button-hide {
+    display: block;
+}
+
+#home:target nav {
+    display: block;
+}
+
+#home:target .navbar {
+    position: fixed;
+    width: 100%;
+}
+
+/* Buttons */
+
+.btn.is-project-or-post{
+    grid-column: span 2;
+}
+
+/* Classes only found in contact.html */
+
+.form-radio-option{
+    display: inline-block;
+}
+
+/*************************************************************
+                        MEDIA CONTENT
+*************************************************************/
+
+/* Classes only found in report.html */
+
+.is-picture{
+    height: 8vw;
+    padding: 0;
+    margin: 0;
+}
+
+.word-document .list.image-list-3 img.is-picture.is-picture-150, .word-document .list.image-list-3 img.is-picture.is-picture-200 {
+    width: 100%;
+    height: auto !important;
+}
+/* END OF */
+
+
+/* Adjusting element looks based on screen width (960px, 768px, 512px, 480px, and 396px) */
+
+@media screen and (max-width:960px) {
+    .word-document .list.image-list-3:has(.image.is-16by9 img.is-picture.is-picture-200){
+        grid-template-columns: 1fr;
+    }
+    
+    .word-document .list.image-list-3:has(.image.is-16by9 img.is-picture.is-picture-200) li:nth-child(2n+1):is(:last-child){
+        grid-column: unset;
+    }
+}
+
+@media screen and (max-width:768px) {
+    /*************************************************************
+                                LAYOUT
+    **************************************************************/
+    .card-grid, .card-grid.projects, .card-grid.posts{
+        grid-template-columns: unset;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Classes only found in contact.html */
+    
+    .form-row.col2, .contact-form-row.col2 {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-content: flex-start;
+    } 
+    
+    .form-row.col2 .form-row-col, .contact-form-row.col2 .contact-form-row-col {
+        flex: 0 0 auto;
+        width: 100%;
+        margin: 0;
+    } /* (Abasi, 2025a) */
+    
+    /* Classes only found in report.html */
+    
+    main:has(.word-document){
+        padding: 0;
+    }
+    
+    .word-document{
+        padding: 6rem 4rem;
+    }
+    
+    .word-document .list.image-list-3:has(img.is-picture.is-picture-200){
+        grid-template-columns: 1fr;
+    }
+    /* END OF */
+    
+    /*************************************************************
+                            MEDIA CONTENT
+    *************************************************************/
+    /* Classes only found in index.html */
+    .testimonial-sender-photo {
+        height: 33.333333vw;
+    }
+    /* END OF */
+
+    /*************************************************************
+                                INPUT
+    *************************************************************/
+    .btn.is-project-or-post{
+        grid-column: span 1;
+    }
+}
+/* END OF */
+
+@media screen and (max-width:512px) {
+    .form-radio{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-radio-option{
+        display: block;
+    }
+
+    .form-radio > .form-radio-option:nth-child(3){
+        margin:0;
+    }
+
+    .image.is-picture{
+        height: 3vw;
+        padding: 0;
+        margin: 0;
+    }
+
+    .word-document{
+        padding: 6rem 2rem;
+    }
+}
+
+ @media screen and (max-width:480px) {
+    .bg-video-light, .bg-video-dark {
+        height: calc(125vh + 17rem) !important;
+    }
+    
+    header{
+        height:125vh;
+        padding-top: 10rem;
+        justify-content: flex-start;
+    }
+    .bio{
+        font-size: 2.5rem;
+    }
+    .bio + .tagline{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:396px) {
+    nav, main,
+    aside, footer {
+        padding: 0;
+    }
+
+    .bg-video-light, .bg-video-dark{
+        width:100%;
+    }
+
+    section{
+        padding: 9rem 1.5rem 0;
+    }
+    
+    .section-content {
+        padding: 0 1.5rem;
+    }
+    
+    main > .section-content:last-child{
+        padding: 0 1.5rem 9rem;
+    }
+
+    .word-document{
+        padding: 6rem 1.5rem;
+    }
+}
+/* END OF */

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- **********************************************************************
+     ******************************** HEAD ********************************
+     ********************************************************************** -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report - Affie</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+    <!-- This overlap is intentional, as the next two files below were split from
+     'responsive.css'. Note that some desktop features are suitable for larger mobile
+     screens. -->
+    <link rel="stylesheet" href="desktop.css" media="screen and (min-width:768px)">
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width:1024px)">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="dark.css" media="screen and (prefers-color-scheme:dark)">
+    <script src="https://kit.fontawesome.com/fb591d1f4c.js" crossorigin="anonymous"></script>
+</head>
+
+<!-- **********************************************************************
+     ******************************** BODY ********************************
+     ********************************************************************** -->
+
+<body id="home">
+    <div class="container">
+        <!-- ********************************
+             Aside (to the left side on desktop)
+            ************************************* -->
+        <aside>
+            <!-- Navigation bar -->
+            <div class="navbar">
+                <span class="logo"><a href="index.html">Affie</a></span>
+                <a class="btn nav-button-show" href="#home" aria-label="Open navigation"></a>
+                <a class="btn nav-button-hide" href="#" aria-label="Close navigation"></a>
+            </div>
+            <!-- ******************
+                 Navigation menu (nav)
+                *********************** -->
+            <nav>
+                <ul>
+                    <li id="home_nav">
+                        <a href="index.html">Home</a>
+                        <ul>
+                            <li><a href="index.html#about">About Me</a></li>
+                            <li><a href="index.html#projects">My Projects</a></li>
+                            <li><a href="index.html#posts">My Posts</a></li>
+                            <li><a href="index.html#testimonials">Testimonials</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="project.html">My Work</a></li>
+                    <li id="report_nav">
+                        <span class="current-page">Report</span>
+                        <ul>
+                            <li><a href="#reflection">Reflection</a></li>
+                            <li><a href="#design">Design Decisions</a></li>
+                            <li><a href="#validation">Validation Reports</a></li>
+                            <li><a href="#video">Video Demo</a></li>
+                            <li><a href="#references">References</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="videoDemo.html">Video Demo</a></li>
+                    <!-- Hidden nav item to avoid submenu background colour from
+                     clipping into <aside>. DO NOT REMOVE. -->
+                    <li>&nbsp;</li>
+                    <li><a href="contact.html" title="Contact me by clicking this button!" class="btn btn-contact">Say
+                            Hi!</a></li>
+                </ul>
+            </nav>
+            <p class="copyright-notice-aside">&copy; Affie 2026</p>
+        </aside> <!-- (Jeznach, 2019) -->
+        <!-- *****************************************************************
+             Container for header, main and footer (to the right side on desktop)
+             *********************************************************************-->
+        <div class="content-container">
+            <!-- Video backgrounds -->
+            <video class="bg-video-light" src="media/img/bg-04-report-light.mp4" playsinline autoplay muted
+                loop></video> <!-- (Coyier, 2017) -->
+            <video class="bg-video-dark" src="media/img/bg-04-report-dark.mp4" playsinline autoplay muted loop></video>
+            <!-- (Coyier, 2017) -->
+            <!-- ***
+                 Header
+                ******** -->
+            <header id="header">
+                <h1 class="bio">Report</h1>
+                <h2 class="tagline">Written report for the development stages of my website</h2>
+            </header>
+            <!-- *
+                 Main
+                 ***** -->
+            <main>
+                <!-- For each section, the ID must be the same as or a similar name to the heading -->
+                <article class="word-document">
+                    <section id="document">
+                        <h2 class="heading">Reflecting on my module experience</h2>
+                        <p class="normal">This document details my experience with the Web Development (a.k.a. web dev)
+                            module so far - discussing the highlights and notable challenges I faced while learning the
+                            practical skills of HTML and CSS, as well as my design decisions.</p>
+                    </section>
+
+                    <div class="section-content">
+                    </div>
+                    <section id="reflection">
+                        <h3 class="heading-2">How am I finding the module?</h3>
+                    </section>
+                    <div class="section-content">
+                        <p class="normal">It has been easy. With my 3 years of web dev experience, I understand most
+                            concepts taught in the module.</p>
+                        <h4 class="heading-3">Positives</h4>
+                        <!-- IF AN IMAGE IS SHRINKED TOO SMALL, CLICK AND TAP ON IT FOR ITS FULL-SIZED VERSION -->
+                        <figure class="image framed picture-left"><a href="media/img/report-05.png"
+                                title="Click here for the full-sized version of this image">
+                                <img src="media/img/report-05.png" alt="Screenshot of content brief" class="is-picture">
+                            </a>
+                            <figcaption><span><abbr title="figure">Fig.</abbr> 1.1: Screenshot of content brief</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="image framed picture-right"><a href="media/img/report-08.png"
+                                title="Click here for the full-sized version of this image">
+                                <img src="media/img/report-08.png" alt="Gantt chart on Microsoft Excel"
+                                    class="is-picture"></a>
+                            <figcaption><span>Fig. 1.2: Gantt chart on Microsoft (MS) Excel</span></figcaption>
+                        </figure>
+                        <figure class="image framed picture-left"><a href="media/img/report-07.png"
+                                title="Click here for the full-sized version of this image"><img
+                                    src="media/img/report-07.png"
+                                    alt='CSS rule for .container class with set grid layout-related properties'
+                                    class="is-picture is-picture-150"></a>
+                            <figcaption>Fig. 2: 'desktop.css' code opened in Visual Studio Code (VSCode) - .container
+                                assembles the semantic elements (<code>header</code>, <code>main</code> and
+                                <code>footer</code> are inside <code>.content-container</code>) into a grid</figcaption>
+                        </figure>
+                        <p class="normal">In weeks 1 and 2, I planned the website development using a content brief for
+                            my text&sol;media (fig. 1.1) and a Gantt chart (fig. 1.2). This allowed me to avoid
+                            placeholder text early while coding my final site.</p>
+                        <p class="normal">I enjoyed creating the responsive layout, as I could experiment with different
+                            solutions. I used a hybrid way: <code>display:grid;</code> on desktop (see fig. 2), and
+                            <code>display:flex;</code> on mobile. Choosing flexbox on mobile allowed the semantic
+                            elements (<code>aside</code>, <code>nav</code>, <code>header</code>, <code>main</code>,
+                            <code>footer</code>) to be stacked vertically in a simple yet flexible manner.</p>
+                        <p class="normal">Developer tools from <abbr title="Microsoft">MS</abbr> Edge and <abbr
+                                title="Visual Studio Code">VSCode</abbr> (see fig. 2) were well relied on when debugging
+                            CSS issues and testing the responsive layout. This approach came with almost no AI
+                            assistance (except where <a href="files/docx/CSY1063-ChatGPT-Logs.docx" target="_blank" rel="noopener">noted</a>),
+                            which boosted my confidence working on this assignment.</p>
+                        <p class="normal">One standout feature was the country selection dropdown with all countries
+                            (recognised by the <a
+                                href="https://en.wikipedia.org/wiki/Member_states_of_the_United_Nations" target="_blank"
+                                rel="noopener">United Nations</a>), which was <abbr
+                                title="Artificial Intelligence">AI</abbr>-automated to avoid manually typing a large
+                            number of <code>option</code> elements.</p>
+                        <h4 class="heading-3">Challenge</h4>
+                        <p class="normal">A major challenge during development was implementing the submenu animation
+                            for the desktop navbar - the text would not disappear on time once the submenu was hovered
+                            off. This was solved by replacing the <code>opacity</code> transition with another
+                            transition for the <code>left</code> property.</p>
+                    </div>
+                    <section id="design">
+                        <h3 class="heading-2">Design decisions</h3>
+                    </section>
+                    <div class="section-content">
+                        <p class="normal">I began developing my website in Week 3, focusing on coding the layout, mobile
+                            optimisation, and colour styling. The design overall was influenced by a few portfolio
+                            websites.</p>
+                        <p class="normal"></p>
+                        <ul class="list image-list-3">
+                            <li>
+                                <figure class="image is-16by9 frameless">
+                                    <a href="media/img/report-01.png"
+                                        title="Click here for the full-sized version of this image"><img
+                                            src="media/img/report-01.png" alt="Jacek Jeznach's portfolio on desktop"
+                                            class="is-picture is-picture-200"></a>
+                                    <figcaption><span>Fig. 3.1: <a
+                                                href="https://web.archive.org/web/20220525152137/https://jacekjeznach.co/"
+                                                target="_blank" rel="noopener">Jacek
+                                                Jeznach</a> - Layout structures; <code>.up-and-down</code>
+                                            animation</span></figcaption>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure class="image is-16by9 frameless">
+                                    <a href="media/img/report-03.png"
+                                        title="Click here for the full-sized version of this image"><img
+                                            src="media/img/report-03.png" alt="Matt Williams' portfolio on desktop"
+                                            class="is-picture is-picture-200"></a>
+                                    <figcaption><span>Fig. 3.2: <a href="https://mattwilldev.com/" target="_blank"
+                                                rel="noopener">Matt Williams</a> - Background
+                                            design; general animation</span></figcaption>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure class="image is-16by9 frameless">
+                                    <a href="media/img/report-02.png"
+                                        title="Click here for the full-sized version of this image"><img
+                                            src="media/img/report-02.png" alt="Matt Farley's portfolio on desktop"
+                                            class="is-picture is-picture-200"></a>
+                                    <figcaption>Fig. 3.3: <span><a href="https://mattfarley.ca/" target="_blank"
+                                                rel="noopener">Matt Farley</a> - Colour scheme;
+                                            hoverable cards</span></figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                        <figure class="image framed picture-left">
+                            <a href="media/img/report-20.png"
+                                title="Click here for the full-sized version of this image"><img
+                                    src="media/img/report-20.png"
+                                    alt="Navigation view for Jeznach's portfolio on mobile" class="is-picture"></a>
+                            <figcaption>Fig. 3.1.1: Mobile navigation layout for Jeznach's website</figcaption>
+                        </figure>
+                        <figure class="image framed picture-right">
+                            <a href="media/img/report-21.png"
+                                title="Click here for the full-sized version of this image"><img
+                                    src="media/img/report-21.png"
+                                    alt="This website in light (top) and dark (bottom) mode" class="is-picture"></a>
+                            <figcaption>Fig. 3.4: My website in light (top) and dark (bottom) mode</figcaption>
+                        </figure>
+                        <p class="normal">Jeznach's fixed left sidebar layout was chosen for the desktop design for
+                            easier navigation on wider screens. This decision also justified using an otherwise
+                            rarely-used tag like <code>&lt;aside&gt;</code>. The navbar, like Jeznach's, also works
+                            differently on mobile: instead of the sidebar, visitors see a full-screen overlay
+                            navigation.</p>
+                        <p class="normal">Originally inspired by Matt Williams, I imagined my portfolio with dotted star
+                            animations around the homepage. He used JavaScript for his background, though, so I couldn't
+                            do as much here. Instead, I opted for autoplaying full-sized video backgrounds - a more
+                            convenient method. For this feature, I borrowed existing code from a blog post by CSS
+                            Tricks' author. I modified his method by adding two videos - each has a separate class that
+                            alternates between <code>display:none;</code> and <code>display:block;</code> based on the
+                            chosen system colour scheme.</p>
+                        <p class="normal">To create an inverse of Farley's colour scheme, I made a green and black
+                            colour scheme in 'dark mode'. Most of the colours changed are stored in <code>:root</code>
+                            variables, so no separate file is needed. Some elements need an entirely different colour
+                            variable, though, which is why I kept a 'dark.css' file.</p>
+                    </div>
+                    <section id="validation">
+                        <h3 class="heading-2">Screenshots of validation reports</h3>
+                        <p class="normal">Below are screenshots of validation reports for my HTML and CSS files.</p>
+                    </section>
+                    <div class="section-content">
+                        <h4 class="heading-3">HTML</h4>
+                        <ul class="list image-list-3">
+                            <li>
+                                <figure class="image frameless"><a href="media/img/report-15.png"
+                                        title="Click here for the full-sized version of this image"><img
+                                            src="media/img/report-15.png"
+                                            alt="Validation report for index.html, successful result"
+                                            class="is-picture is-picture-200"></a>
+                                    <figcaption>Fig. 4.1: index.html</figcaption>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure class="image frameless"><a href="media/img/report-16.png"
+                                        title="Click here for the full-sized version of this image"><img
+                                            src="media/img/report-16.png"
+                                            alt="Validation report for project.html, successful result"
+                                            class="is-picture is-picture-200"></a>
+                                    <figcaption>Fig. 4.2: project.html</figcaption>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure class="image frameless"><a href="media/img/report-17.png"
+                                        title="Click here for the full-sized version of this image"><img
+                                            src="media/img/report-17.png"
+                                            alt="Validation report for contact.html, successful result"
+                                            class="is-picture is-picture-200"></a>
+                                    <figcaption>Fig. 4.3: contact.html</figcaption>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure class="image frameless"><a href="media/img/report-18.png"
+                                        title="Click here for the full-sized version of this image"><img
+                                            src="media/img/report-18.png"
+                                            alt="Validation report for report.html, successful result"
+                                            class="is-picture is-picture-200"></a>
+                                    <figcaption>Fig. 4.4: report.html</figcaption>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure class="image frameless"><a href="media/img/report-19.png"
+                                        title="Click here for the full-sized version of this image"><img
+                                            src="media/img/report-19.png"
+                                            alt="Validation report for videoDemo.html, successful result"
+                                            class="is-picture is-picture-200"></a>
+                                    <figcaption>Fig. 4.5: videoDemo.html</figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                        <h4 class="heading-3">CSS</h4>
+                        <ul class="list image-list-3">
+                            <li>
+                                <figure class="image frameless"><a href="media/img/report-09.png"
+                                        title="Click here for the full-sized version of this image"><img
+                                            src="media/img/report-09.png"
+                                            alt="Validation report for animations.css, successful result"
+                                            class="is-picture is-picture-200"></a>
+                                    <figcaption>Fig. 4.6: animations.css</figcaption>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure class="image frameless"><a href="media/img/report-10.png"
+                                        title="Click here for the full-sized version of this image"><img
+                                            src="media/img/report-10.png"
+                                            alt="Validation report for dark.css, successful result"
+                                            class="is-picture is-picture-200"></a>
+                                    <figcaption>Fig. 4.7: dark.css</figcaption>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure class="image frameless"><a href="media/img/report-11.png"
+                                        title="Click here for the full-sized version of this image"><img
+                                            src="media/img/report-11.png"
+                                            alt="Validation report for desktop.css, successful result"
+                                            class="is-picture is-picture-200"></a>
+                                    <figcaption>Fig. 4.8: desktop.css</figcaption>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure class="image frameless"><a href="media/img/report-12.png"
+                                        title="Click here for the full-sized version of this image"><img
+                                            src="media/img/report-12.png"
+                                            alt="Validation report for mobile.css, successful result"
+                                            class="is-picture is-picture-200"></a>
+                                    <figcaption>Fig. 4.9: mobile.css</figcaption>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure class="image frameless"><a href="media/img/report-13.png"
+                                        title="Click here for the full-sized version of this image"><img
+                                            src="media/img/report-13.png"
+                                            alt="Validation report for fonts.css, successful result"
+                                            class="is-picture is-picture-200"></a>
+                                    <figcaption>Fig. 4.10: fonts.css</figcaption>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure class="image frameless"><a href="media/img/report-14.png"
+                                        title="Click here for the full-sized version of this image"><img
+                                            src="media/img/report-14.png"
+                                            alt="Validation report for style.css, successful result"
+                                            class="is-picture is-picture-200"></a>
+                                    <figcaption>Fig. 4.11: style.css</figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </div>
+                    <section id="video">
+                        <h2 class="heading">Video Demo</h2>
+                    </section>
+                    <div class="section-content">
+                        <p class="normal">Click <a href="videoDemo.html#video">here</a> to watch the video
+                            demonstration.</p>
+                    </div>
+                    <section id="references">
+                        <h2 class="heading">References</h2>
+                    </section>
+                    <div class="section-content">
+                        <ul class="list">
+                            <li>Jeznach, J. (2019). JJ | Front End Developer | WordPress Expert - Freelancer. [online]
+                                Available at: <a
+                                    href="https://web.archive.org/web/20220525152137/https://jacekjeznach.com/"
+                                    target="_blank"
+                                    rel="noopener">https://web.archive.org/web/20220525152137/https://jacekjeznach.com/</a>
+                                [Accessed 16 Feb. 2026]. Inspiration for website layout and ‘up and down’ arrow
+                                animations (from title).</li>
+                            <li>Farley, M. (2022). Matt Farley. [online] Matt Farley. Available at: <a
+                                    href="https://mattfarley.ca/" target="_blank"
+                                    rel="noopener">https://mattfarley.ca/</a> [Accessed 16 Feb. 2026]. Inspiration for
+                                the colour scheme and cards feature.</li>
+                            <li>Coyier, C. (2017). Full Page Background Video Styles. [online] CSS-Tricks. Available at:
+                                <a href="https://css-tricks.com/full-page-background-video-styles/" target="_blank"
+                                    rel="noopener">https://css-tricks.com/full-page-background-video-styles/</a>
+                                [Accessed 2 Mar. 2026]. My code for the full-video background was derived from this
+                                source, in which Coyier cites Storey’s research and his original code <a
+                                    href="#storey">(Storey, 2017)</a> while providing his own version.</li>
+                            <li>Coyier, C. (2021). Color Alpha Anywhere. [online] CSS-Tricks. Available at: <a
+                                    href="https://css-tricks.com/color-alpha-anywhere/" target="_blank"
+                                    rel="noopener">https://css-tricks.com/color-alpha-anywhere/</a> [Accessed 5 Mar.
+                                2026]. Used for mixing variable colours with alpha values in the (text or box)-shadow
+                                property for some elements.</li>
+                            <li>Jakemmarsh and Daniel (2013). How to implement fixed sidebar correctly? [online] Stack
+                                Overflow. Available at: <a
+                                    href="https://stackoverflow.com/questions/15590803/how-to-implement-fixed-sidebar-correctly"
+                                    target="_blank"
+                                    rel="noopener">https://stackoverflow.com/questions/15590803/how-to-implement-fixed-sidebar-correctly</a>
+                                [Accessed 20 Feb. 2026]. This link taught me how to make my navigation sidebar fixed via
+                                ‘display: fixed’. Daniel’s code was mixed with some of my existing grid code on
+                                template.html.</li>
+                            <li>Abasi, A. (2025a). Lissy Meaner 2. [online] Lissy Meaner. Available at: <a
+                                    href="https://www.lissym.dev/" target="_blank"
+                                    rel="noopener">https://www.lissym.dev/</a> [Accessed 23 Feb. 2026].</li>
+                            <li>CSS Scan. (n.d.). Beautiful CSS box-shadow examples. [online] Available at: <a
+                                    href="https://getcssscan.com/css-box-shadow-examples" target="_blank"
+                                    rel="noopener">https://getcssscan.com/css-box-shadow-examples</a> [Accessed 28 Feb.
+                                2026]. I retrieved the basis for my box shadows from this website, and tweaked it to
+                                enhance my buttons’ appearance (for both themes) or changed the colour modes to HSL or
+                                RGBA.</li>
+                            <li>Schneider, T. (2024). scroll to top button (no JS). [online] Codepen.io. Available at:
+                                <a href="https://codepen.io/Stimmler/pen/yLrKYpg" target="_blank"
+                                    rel="noopener">https://codepen.io/Stimmler/pen/yLrKYpg</a> [Accessed 5 Mar. 2026].
+                            </li>
+                            <li>Abasi, A. (2025b). ::: Gimmy - ‘Hot Action’ Official M/V ::: [online] Starbust
+                                Enterprises. Available at: <a href="https://starbust-ent.com/catalogs/mv/hot-action"
+                                    target="_blank" rel="noopener">https://starbust-ent.com/catalogs/mv/hot-action</a>
+                                [Accessed 8 Mar. 2026].</li>
+                            <li id="storey">Storey, D. (2013). Create Fullscreen HTML5 Page Background Video. [online]
+                                The New Code. Available at: <a
+                                    href="https://web.archive.org/web/20170528232358im_/https://thenewcode.com/777/Create-Fullscreen-HTML5-Page-Background-Video"
+                                    target="_blank"
+                                    rel="noopener">https://web.archive.org/web/20170528232358im_/https://thenewcode.com/777/Create-Fullscreen-HTML5-Page-Background-Video</a>
+                                [Accessed 8 Mar. 2026].</li>
+                        </ul>
+                    </div>
+                </article>
+            </main>
+            <!-- ***
+                 Footer
+                ******** -->
+            <footer>
+                <div class="footer-row">
+                    <ul class="footer-row-col social-media-links">
+                        <li class="social-media-link"><a href="https://github.com/lissymeaner" target="_blank"
+                                rel="noopener" title="GitHub" class="icon icon-github"><i class="fa-brands fa-github"></i></a></li>
+                        <li class="social-media-link"><a href="https://www.instagram.com/lissymeaner" target="_blank"
+                                rel="noopener" title="Instagram" class="icon icon-ig"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li class="social-media-link"><a href="https://www.linkedin.com/in/mamjoonie/" target="_blank"
+                                rel="noopener" title="LinkedIn" class="icon icon-linkedin"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    </ul>
+                    <ul class="footer-row-col necessary-links">
+                        <li class="necessary-link"><a href="#">Cookies</a></li>
+                        <li class="necessary-link"><a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+                <p class="copyright-notice-footer">Handcrafted by me, &copy; Affie 2026</p>
+            </footer>
+            <div class="btn btn-scroll-to-top" title="Scroll to top"><a href="#" aria-label="Scroll to top"><svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path
+                            d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464a256 256 0 1 0 0-512 256 256 0 1 0 0 512zm11.3-387.3c-6.2-6.2-16.4-6.2-22.6 0l-104 104c-4.6 4.6-5.9 11.5-3.5 17.4s8.3 9.9 14.8 9.9l72 0 0 104c0 13.3 10.7 24 24 24l16 0c13.3 0 24-10.7 24-24l0-104 72 0c6.5 0 12.3-3.9 14.8-9.9s1.1-12.9-3.5-17.4l-104-104z" />
+                    </svg></a></div>
+        </div>
+    </div>
+</body>
+
+</html>

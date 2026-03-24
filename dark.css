@@ -1,0 +1,150 @@
+/***************************************************************************
+    Colours, commonly used colours (e.g. theme colours) stored as variables
+****************************************************************************/
+:root {
+    --primary-00: #6e07f3; /* Primary light theme colour */
+    --primary-01: #5c04cc;
+    --primary-02: #4b04a6;
+    --secondary-00: #fff; /* Secondary light theme colour */
+    --secondary-01: #ccc;
+    --bg-header: #fffa;
+    --bg-main: #fff;
+    --body: #000;
+    --card-outline: #000;
+    --card-outline-hover: #333;
+    --code-bg: #ccc;
+    --code-body: #606;
+    --w: white;
+    --g: #7f7f7f;
+    --b: black;
+    --dr: darkred;
+    --odb: olivedrab;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --primary-00: #59a404; /* Primary dark theme colour */
+        --primary-01: #6fcc04;
+        --primary-02: #85f208;
+        --secondary-00: #b5fa66; /* Secondary dark theme colour */
+        --bg-header: #030500aa;
+        --bg-main: #030500;
+        --body: #fff;
+        --card-outline: #59a404;
+        --card-outline-hover: #b5fa66;
+        --code-bg: #333;
+        --code-body: #0f0;
+    }
+}
+/* END OF */
+
+/**************************************************************
+    LAYOUT, see the light theme version of this in 'style.css'
+***************************************************************/
+
+/* Navigation menu */
+nav ul li:not(nav ul li ul li):not(:last-child):hover{
+    background-color: var(--primary-01);
+}
+
+/* Adjusting look based on mobile screen widths */
+@media screen and (max-width:1024px){
+    nav ul li:not(nav ul li ul li):not(:last-child) {
+        border-top: .1rem solid var(--primary-01);
+    }
+
+    nav > ul > li:hover > ul
+    {
+        border-top: .1rem solid var(--primary-02);
+        border-bottom: .1rem solid var(--primary-02);
+    }
+}
+
+/* Background video */
+/* If you change your system color theme to 'dark', */
+/* the dark version of the video appears, */
+.bg-video-dark {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .5;
+}
+
+/* while the light version disappears. */
+.bg-video-light{
+    display: none;
+}
+/* END OF */
+
+/*************************************************************
+                        TEXT CONTENT
+*************************************************************/
+nav ul li:not(:last-child, :nth-last-child(2)):hover > a, nav ul li ul li:hover > a {
+    color: var(--b);
+}
+
+/* Green text glow effect */
+section:not(.word-document section) > *:is(h1, h2){
+    color: var(--b);
+    text-shadow: 0 0 .5rem var(--secondary-00), 0 0 3rem var(--primary-02);
+}
+
+.bio{
+    color: #030500;
+    text-shadow: 0 0 .25rem var(--secondary-00), 0 0 .5rem var(--primary-02);
+}
+/* END OF */
+
+/*************************************************************
+                            INPUT
+*************************************************************/
+
+/* Buttons, using <a> tag, not <button> */
+
+.btn-contact{
+    box-shadow: hsl(from var(--b) h s l / 0.10) 0px -23px 25px 0px inset, hsl(from var(--b) h s l / 0.07) 0px -36px 30px 0px inset, hsl(from var(--b) h s l / 0.03) 0px -79px 40px 0px inset, hsl(from var(--b) h s l / 0.01) 0px 1px 1px, hsl(from var(--b) h s l / 0.02) 0px 2px 2px, hsl(from var(--b) h s l / 0.02) 0px 8px 4px, hsl(from var(--b) h s l / 0.02) 0px 8px 8px, hsl(from var(--b) h s l / 0.02) 0px 16px 19px; /* (Coyier, 2021)(CSS Scan, n.d.) */
+}
+
+.btn-contact:hover, .btn-contact-current-page{
+    border-color: var(--secondary-00);
+    color: var(--secondary-00);
+}
+
+.btn.is-visit, .btn.is-project-or-post{
+    background-color: var(--bg-main);
+    border-color: var(--primary-00);
+    box-shadow: hsl(from var(--g) h s l / 0.10) 0px -23px 25px 0px inset, hsl(from var(--g) h s l / 0.07) 0px -36px 30px 0px inset, hsl(from var(--g) h s l / 0.03) 0px -79px 40px 0px inset, hsl(from var(--g) h s l / 0.01) 0px 1px 1px, hsl(from var(--g) h s l / 0.02) 0px 2px 2px, hsl(from var(--g) h s l / 0.02) 0px 8px 4px, hsl(from var(--g) h s l / 0.02) 0px 8px 8px, hsl(from var(--g) h s l / 0.02) 0px 16px 19px; /* (Coyier, 2021)(CSS Scan, n.d.) */
+}
+
+.btn.is-visit:hover, .btn.is-project-or-post:hover{
+    border: .2rem solid var(--secondary-00);
+    box-shadow: hsl(from var(--w) h s l / 0.10) 0px -23px 25px 0px inset, hsl(from var(--w) h s l / 0.07) 0px -36px 30px 0px inset, hsl(from var(--w) h s l / 0.03) 0px -79px 40px 0px inset, hsl(from var(--w) h s l / 0.01) 0px 1px 1px, hsl(from var(--w) h s l / 0.02) 0px 2px 2px, hsl(from var(--w) h s l / 0.02) 0px 8px 4px, hsl(from var(--w) h s l / 0.02) 0px 8px 8px, hsl(from var(--w) h s l / 0.02) 0px 16px 19px; /* (Coyier, 2021)(CSS Scan, n.d.) */
+    text-shadow: .1rem .1rem .1rem var(--b);
+}
+
+.btn-scroll-to-top:hover{
+    box-shadow: hsl(from var(--w) h s l / 0.10) 0px -23px 25px 0px inset, hsl(from var(--w) h s l / 0.07) 0px -36px 30px 0px inset, hsl(from var(--w) h s l / 0.03) 0px -79px 40px 0px inset, hsl(from var(--w) h s l / 0.01) 0px 1px 1px, hsl(from var(--w) h s l / 0.02) 0px 2px 2px, hsl(from var(--w) h s l / 0.02) 0px 8px 4px, hsl(from var(--w) h s l / 0.02) 0px 8px 8px, hsl(from var(--w) h s l / 0.02) 0px 16px 19px; /* (Coyier, 2021)(CSS Scan, n.d.) */
+}
+
+/* Contact form-related rules, only on contact.html */
+
+.form-input, #country{
+    background-color: var(--b);
+    border: .1rem solid var(--primary-00);
+}
+
+.form-input::placeholder, #country{
+    color: var(--primary-00);
+}
+
+input[type="submit"]{
+    background-color: var(--primary-02);
+    color: var(--b);
+    border-color: var(--primary-00);
+    box-shadow: rgba(73, 93, 50, 0.251) 0px 30px 60px -12px inset, hsl(from var(--w) h s l / 0.3) 0px 18px 36px -18px inset;
+}
+/* END OF */

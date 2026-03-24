@@ -1,0 +1,172 @@
+/***************************************************************************
+    Colours, commonly used colours (e.g. theme colours) stored as variables
+****************************************************************************/
+:root {
+    --primary-00: #6e07f3; /* Primary light theme colour */
+    --primary-01: #5c04cc;
+    --primary-02: #4b04a6;
+    --secondary-00: #fff; /* Secondary light theme colour */
+    --secondary-01: #ccc;
+    --bg-header: #fffa;
+    --bg-main: #fff;
+    --body: #000;
+    --card-outline: #000;
+    --card-outline-hover: #333;
+    --code-bg: #ccc;
+    --code-body: #606;
+    --w: white;
+    --g: #7f7f7f;
+    --b: black;
+    --dr: darkred;
+    --odb: olivedrab;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --primary-00: #59a404; /* Primary dark theme colour */
+        --primary-01: #6fcc04;
+        --primary-02: #85f208;
+        --secondary-00: #b5fa66; /* Secondary dark theme colour */
+        --bg-header: #030500aa;
+        --bg-main: #030500;
+        --body: #fff;
+        --card-outline: #59a404;
+        --card-outline-hover: #b5fa66;
+        --code-bg: #333;
+        --code-body: #0f0;
+    }
+    }
+/* END OF */
+
+/**************************************************************************
+                                All animations
+***************************************************************************/
+/* Navbar animations */
+/* Navbar animation (desktop-only) */
+nav ul ul, nav > ul > li:hover > ul {
+    transition: left 250ms ease-out; /* this animation takes 0.25 seconds to fade in */
+}
+
+nav > ul > li:hover > ul{
+    left: 100%;
+}
+/* END OF */
+
+/* Navbar animations (mobile-only) */
+@media screen and (max-width:1024px){
+    #home:target .nav-button-show, #home:target .nav-button-hide{
+        transform: rotateZ(-45deg);
+        border-top: 0;
+        border-bottom: 0.2rem solid var(--w);
+        border-radius: 0;
+        height: 0;
+        width: 1.48rem;
+        transition: .45s ease-out;
+    }
+    
+    #home:target .nav-button-show::before, #home:target .nav-button-hide::before{
+        transform: rotateZ(90deg);
+        margin: 0 -.72rem 0;
+        width: 1.48rem;
+        transition: .45s ease-out;
+    }
+
+    #home nav{
+        position: fixed;
+        transform: translateY(-200%);
+        transition: .45s ease-in;
+    }
+    
+    #home:target nav{
+        transform: translateY(7%);
+        transition: .45s ease-out;
+    }
+
+}
+
+/* END OF */
+/* END OF */
+
+/* Header title animation (dark-only) */
+@media screen and (prefers-color-scheme: dark){
+    .bio{
+        animation: glow 2500ms infinite;
+    }
+
+    @keyframes glow {
+        0%, 100%{text-shadow: 0 0 .25rem var(--secondary-00), 0 0 .5rem var(--primary-00);}
+        50%{text-shadow: 0 0 .5rem var(--secondary-00), 0 0 1rem var(--primary-00);}
+    }
+}
+/* END OF */
+
+/* Cards animations */
+/* Project card hover animation */
+.project-card .overlay, .project-card .project-caption,
+.project-card .figure-in-card:hover .overlay, .project-card .figure-in-card:hover + .overlay,
+.project-card .figure-in-card:hover .project-caption {
+    transition: .45s ease-in-out;
+}
+
+.project-card .figure-in-card, .project-card .figure-in-card .project-logo-thumb,
+.project-card .figure-in-card:hover, .project-card .figure-in-card:hover img{
+    transition: .25s ease-in-out;
+}
+
+.project-card .figure-in-card .project-logo-thumb{
+    transform: scale(1);
+}
+
+.project-card .overlay, .project-card .project-caption {
+    opacity: 0;
+}
+
+.project-card .figure-in-card:hover{
+    border-color: var(--card-outline-hover);
+}
+
+.project-card .figure-in-card:hover img{
+    transform: scale(1.1);
+}
+
+.project-card .figure-in-card:hover .overlay, .project-card .figure-in-card:hover + .overlay,
+.project-card .figure-in-card:hover .project-caption {
+    opacity: 1;
+}
+/* END OF */
+
+/* Post preview card animation */
+.post-preview-card figure, .post-preview-card a figure:hover {
+    transition: .25s ease-in-out;
+}
+
+.post-preview-card a figure:hover {
+    outline-color: var(--card-outline-hover);
+}
+/* END OF */
+/* END OF */
+
+/* Testimonial list hover animation */
+.testimonial-li-content, .testimonial-li-content:hover {
+    transition: .25s ease-in-out;
+}
+
+.testimonial-li-content:hover {
+    border-color: var(--card-outline-hover);
+}
+/* END OF */
+
+/*Misc animations*/
+/*Up and down animation for flow content using .up-and-down, e.g. <span class="up-and-down">*/
+.up-and-down{
+    animation: up-and-down 1000ms ease-out infinite;
+}
+
+@keyframes up-and-down {
+    0%, 100%{transform: translateY(0);}
+    50%{transform: translateY(-15%);}
+    75%{transform: translateY(35%);}
+} /*(Jeznach, 2019)*/
+/* END OF */
+/* END OF */
+/* END 0F */

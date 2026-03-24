@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- **********************************************************************
+     ******************************** HEAD ********************************
+     ********************************************************************** -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Affie</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+    <!-- This overlap is intentional, as the next two files below were split from
+     'responsive.css'. Note that some desktop features are suitable for larger mobile
+     screens. -->
+    <link rel="stylesheet" href="desktop.css" media="screen and (min-width:768px)">
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width:1024px)">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="dark.css" media="screen and (prefers-color-scheme:dark)">
+    <script src="https://kit.fontawesome.com/fb591d1f4c.js" crossorigin="anonymous"></script>
+</head>
+
+<!-- **********************************************************************
+     ******************************** BODY ********************************
+     ********************************************************************** -->
+
+<body id="home">
+    <div class="container">
+        <!-- ********************************
+             Aside (to the left side on desktop)
+            ************************************* -->
+        <aside>
+            <!-- Navigation bar -->
+            <div class="navbar">
+                <span class="logo"><a href="index.html">Affie</a></span>
+                <a class="btn nav-button-show" href="#home" aria-label="Open navigation"></a>
+                <a class="btn nav-button-hide" href="#" aria-label="Close navigation"></a>
+            </div>
+            <!-- ******************
+                 Navigation menu (nav)
+                *********************** -->
+            <nav>
+                <ul>
+                    <li id="home_nav">
+                        <a href="index.html">Home</a>
+                        <ul>
+                            <li><a href="index.html#about">About Me</a></li>
+                            <li><a href="index.html#projects">My Projects</a></li>
+                            <li><a href="index.html#posts">My Posts</a></li>
+                            <li><a href="index.html#testimonials">Testimonials</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="current-page">My Work</span></li>
+                    <li id="report_nav">
+                        <a href="report.html">Report</a>
+                        <ul>
+                            <li><a href="report.html#reflection">Reflection</a></li>
+                            <li><a href="report.html#design">Design Decisions</a></li>
+                            <li><a href="report.html#validation">Validation Reports</a></li>
+                            <li><a href="report.html#video">Video Demo</a></li>
+                            <li><a href="report.html#references">References</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="videoDemo.html">Video Demo</a></li>
+                    <!-- Hidden nav item to avoid submenu background colour from
+                     clipping into <aside>. DO NOT REMOVE. -->
+                    <li>&nbsp;</li>
+                    <li><a href="contact.html" title="Contact me by clicking this button!" class="btn btn-contact">Say
+                            Hi!</a></li> <!-- (Farley, 2022) -->
+                </ul>
+            </nav>
+            <p class="copyright-notice-aside">&copy; Affie 2026</p>
+        </aside> <!-- (Jeznach, 2019) -->
+        <!-- ******************************************************************
+             Container for header, main, and footer (to the right side on desktop)
+             **********************************************************************-->
+        <div class="content-container">
+            <!-- Video backgrounds -->
+            <video class="bg-video-light" src="media/img/bg-01-project-light.mp4" playsinline autoplay muted
+                loop></video> <!-- (Coyier, 2017) -->
+            <video class="bg-video-dark" src="media/img/bg-01-project-dark.mp4" playsinline autoplay muted loop></video>
+            <!-- (Coyier, 2017) -->
+            <!-- ***
+                 Header
+                ******** -->
+            <header id="header">
+                <h1 class="bio">Showcase</h1>
+                <h2 class="tagline">A complete list of my projects. <span class="up-and-down">&DownArrow;</span></h2>
+            </header>
+            <!-- *
+                 Main
+                 ***** -->
+            <main>
+                <!-- For each section, the ID must be the same as or a similar name to the heading -->
+                <section id="main">
+                    <h2>Projects</h2>
+                    <p>For my projects, it's always that I've designed a website for a company or a brand. They come in
+                        different genres &ndash; e-commerce, portfolios, the banks that rival the High Street, you name
+                        them.</p>
+                </section>
+                <div class="section-content">
+                    <div class="card-grid projects">
+                        <!-- Hudascakes -->
+                        <div class="card project-card">
+                            <div class="figure-in-card image is-3by2">
+                                <img class="project-logo-thumb" src="media/img/3x2-00-hudascakes-logo.png"
+                                    alt="Hudascakes logo">
+                                <div class="project-caption">
+                                    <h3 class="project-desc">Well-crafted soft bakery goods from FoodTok-famous cake
+                                        artist named Huda.</h3>
+                                    <a href="#" class="btn is-visit"><span>Visit Website</span><span
+                                            class="icon icon-rchevron">&gt;</span></a>
+                                </div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <!-- Jo Handy's Repair -->
+                        <div class="card project-card">
+                            <div class="figure-in-card image is-3by2">
+                                <img class="project-logo-thumb" src="media/img/3x2-01-jo-logo.png"
+                                    alt="Jo Handy's Repair logo">
+                                <div class="project-caption">
+                                    <h3 class="project-desc">No-nonsense one-page portfolio of Joanne Handemann's
+                                        excellent handyman services.</h3>
+                                    <a href="#" class="btn is-visit"><span>Visit Website</span><span
+                                            class="icon icon-rchevron">&gt;</span></a>
+                                </div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <!-- Akuma Bank -->
+                        <div class="card project-card">
+                            <div class="figure-in-card image is-3by2">
+                                <img class="project-logo-thumb" src="media/img/3x2-02-akuma-logo.png"
+                                    alt="Akuma Bank logo">
+                                <div class="project-caption">
+                                    <h3 class="project-desc">The UK's most-trusted digital bank since Starling.</h3>
+                                    <a href="#" class="btn is-visit"><span>Visit Website</span><span
+                                            class="icon icon-rchevron">&gt;</span></a>
+                                </div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <!-- Inklywood -->
+                        <div class="card project-card">
+                            <div class="figure-in-card image is-3by2">
+                                <img class="project-logo-thumb" src="media/img/3x2-03-inklywood-logo.png"
+                                    alt="Inklywood logo">
+                                <div class="project-caption">
+                                    <h3 class="project-desc">Ultimate go-to database for browsing and viewing accurate
+                                        entries of a celeb's tattoos.</h3>
+                                    <a href="#" class="btn is-visit"><span>Visit Website</span><span
+                                            class="icon icon-rchevron">&gt;</span></a>
+                                </div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <!-- Dryyy Baseball Caps -->
+                        <div class="card project-card">
+                            <div class="figure-in-card image is-3by2">
+                                <img class="project-logo-thumb" src="media/img/3x2-04-dryyy-logo.png"
+                                    alt="Dryyy Baseball Caps logo">
+                                <div class="project-caption">
+                                    <h3 class="project-desc">Top-quality entrepreneurial brand of baseball caps manned
+                                        by two ex-Sainsbury's stylists.</h3>
+                                    <a href="#" class="btn is-visit"><span>Visit Website</span><span
+                                            class="icon icon-rchevron">&gt;</span></a>
+                                </div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <!-- HUNTR/XP -->
+                        <div class="card project-card">
+                            <div class="figure-in-card image is-3by2">
+                                <img class="project-logo-thumb" src="media/img/3x2-05-huntrxp-logo.png"
+                                    alt="HUNTR/XP logo">
+                                <div class="project-caption">
+                                    <h3 class="project-desc">Shorty-winning health and fitness podcast run by three
+                                        ex-demon hunters of HUNTR/X.</h3>
+                                    <a href="#" class="btn is-visit"><span>Visit Website</span><span
+                                            class="icon icon-rchevron">&gt;</span></a>
+                                </div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <!-- Mezzopiano -->
+                        <div class="card project-card">
+                            <div class="figure-in-card image is-3by2">
+                                <img class="project-logo-thumb" src="media/img/3x2-06-mezzopiano-logo.png"
+                                    alt="Mezzopiano logo">
+                                <div class="project-caption">
+                                    <h3 class="project-desc">Small-sized local trattoria with exquisite taste and 10/10
+                                        quality.</h3>
+                                    <a href="#" class="btn is-visit"><span>Visit Website</span><span
+                                            class="icon icon-rchevron">&gt;</span></a>
+                                </div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <!-- Pipi Rocks -->
+                        <div class="card project-card">
+                            <div class="figure-in-card image is-3by2">
+                                <img class="project-logo-thumb" src="media/img/3x2-07-pipi-rocks-logo.png"
+                                    alt="Pipi Rocks logo">
+                                <div class="project-caption">
+                                    <h3 class="project-desc">Wales' home of shiny rocks and minerals.</h3>
+                                    <a href="#" class="btn is-visit"><span>Visit Website</span><span
+                                            class="icon icon-rchevron">&gt;</span></a>
+                                </div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <!-- Luv in Vegas -->
+                        <div class="card project-card">
+                            <div class="figure-in-card image is-3by2">
+                                <img class="project-logo-thumb" src="media/img/3x2-08-luv-logo.png"
+                                    alt="Luv in Vegas logo">
+                                <div class="project-caption">
+                                    <h3 class="project-desc">UK-based high-end, niche, and preppy clothing brand, est.
+                                        2008.</h3>
+                                    <a href="#" class="btn is-visit"><span>Visit Website</span><span
+                                            class="icon icon-rchevron">&gt;</span></a>
+                                </div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <!-- Queen of Spades -->
+                        <div class="card project-card">
+                            <div class="figure-in-card image is-3by2">
+                                <img class="project-logo-thumb" src="media/img/3x2-09-queen-of-spades-logo.png"
+                                    alt="Queen of Spades logo">
+                                <div class="project-caption">
+                                    <h3 class="project-desc">Merchandise from the elusive IG-famous masked magician.
+                                    </h3>
+                                    <a href="#" class="btn is-visit"><span>Visit Website</span><span
+                                            class="icon icon-rchevron">&gt;</span></a>
+                                </div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                    </div> <!-- (Farley, 2022) -->
+                </div>
+            </main>
+            <!-- ***
+                 Footer
+                ******** -->
+            <footer>
+                <div class="footer-row">
+                    <ul class="footer-row-col social-media-links">
+                        <li class="social-media-link"><a href="https://github.com/lissymeaner" target="_blank"
+                                rel="noopener" title="GitHub" class="icon icon-github"><i class="fa-brands fa-github"></i></a></li>
+                        <li class="social-media-link"><a href="https://www.instagram.com/lissymeaner" target="_blank"
+                                rel="noopener" title="Instagram" class="icon icon-ig"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li class="social-media-link"><a href="https://www.linkedin.com/in/mamjoonie/" target="_blank"
+                                rel="noopener" title="LinkedIn" class="icon icon-linkedin"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    </ul>
+                    <ul class="footer-row-col necessary-links">
+                        <li class="necessary-link"><a href="#">Cookies</a></li>
+                        <li class="necessary-link"><a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+                <p class="copyright-notice-footer">Handcrafted by me, &copy; Affie 2026</p>
+            </footer>
+            <div class="btn btn-scroll-to-top" title="Scroll to top"><a href="#" aria-label="Scroll to top"><svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path
+                            d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464a256 256 0 1 0 0-512 256 256 0 1 0 0 512zm11.3-387.3c-6.2-6.2-16.4-6.2-22.6 0l-104 104c-4.6 4.6-5.9 11.5-3.5 17.4s8.3 9.9 14.8 9.9l72 0 0 104c0 13.3 10.7 24 24 24l16 0c13.3 0 24-10.7 24-24l0-104 72 0c6.5 0 12.3-3.9 14.8-9.9s1.1-12.9-3.5-17.4l-104-104z" />
+                    </svg></a></div>
+        </div>
+    </div>
+</body>
+
+</html>

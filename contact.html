@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- **********************************************************************
+     ******************************** HEAD ********************************
+     ********************************************************************** -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Affie</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+    <!-- This overlap is intentional, as the next two files below were split from
+     'responsive.css'. Note that some desktop features are suitable for larger mobile
+     screens. -->
+    <link rel="stylesheet" href="desktop.css" media="screen and (min-width:768px)">
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width:1024px)">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="dark.css" media="screen and (prefers-color-scheme:dark)">
+    <script src="https://kit.fontawesome.com/fb591d1f4c.js" crossorigin="anonymous"></script>
+</head>
+
+<!-- **********************************************************************
+     ******************************** BODY ********************************
+     ********************************************************************** -->
+
+<body id="home">
+    <div class="container">
+        <!-- ********************************
+             Aside (to the left side on desktop)
+            ************************************* -->
+        <aside>
+            <!-- Navigation bar -->
+            <div class="navbar">
+                <span class="logo"><a href="index.html">Affie</a></span>
+                <a class="btn nav-button-show" href="#home" aria-label="Open navigation"></a>
+                <a class="btn nav-button-hide" href="#" aria-label="Close navigation"></a>
+            </div>
+            <!-- ******************
+                 Navigation menu (nav)
+                *********************** -->
+            <nav>
+                <ul>
+                    <li id="home_nav">
+                        <a href="index.html">Home</a>
+                        <ul>
+                            <li><a href="index.html#about">About Me</a></li>
+                            <li><a href="index.html#projects">My Projects</a></li>
+                            <li><a href="index.html#posts">My Posts</a></li>
+                            <li><a href="index.html#testimonials">Testimonials</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="project.html">My Work</a></li>
+                    <li id="report_nav">
+                        <a href="report.html">Report</a>
+                        <ul>
+                            <li><a href="report.html#reflection">Reflection</a></li>
+                            <li><a href="report.html#design">Design Decisions</a></li>
+                            <li><a href="report.html#validation">Validation Reports</a></li>
+                            <li><a href="report.html#video">Video Demo</a></li>
+                            <li><a href="report.html#references">References</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="videoDemo.html">Video Demo</a></li>
+                    <!-- Hidden nav item to avoid submenu background colour from
+                     clipping into <aside>. DO NOT REMOVE. -->
+                    <li>&nbsp;</li>
+                    <li><a class="btn btn-contact btn-contact-current-page">Say Hi!</a></li> <!-- (Farley, 2022) -->
+                </ul>
+            </nav>
+            <p class="copyright-notice-aside">&copy; Affie 2026</p>
+        </aside> <!-- (Jeznach, 2019) -->
+        <!-- *****************************************************************
+             Container for header, main and footer (to the right side on desktop)
+             *********************************************************************-->
+        <div class="content-container">
+            <!-- Video backgrounds -->
+            <video class="bg-video-light" src="media/img/bg-02-contact-light.mp4" playsinline autoplay muted
+                loop></video> <!-- (Coyier, 2017) -->
+            <video class="bg-video-dark" src="media/img/bg-02-contact-dark.mp4" playsinline autoplay muted loop></video>
+            <!-- (Coyier, 2017) -->
+            <!-- ***
+                 Header
+                ******** -->
+            <header id="header">
+                <h1 class="bio">Say 'Hi'!</h1>
+                <h2 class="tagline"><span>Contact me via email below. </span><span
+                        class="up-and-down">&DownArrow;</span></h2>
+            </header>
+            <!-- *
+                 Main
+                 ***** -->
+            <main>
+                <!-- For each section, the ID must be the same as or a similar name to the heading -->
+                <section id="form">
+                    <h2>Form</h2>
+                    <p>Below is the email form to contact me. It's generally advised that you start by entering your
+                        full name (legal or preferred), and follow what the form instructs you to do afterwards.</p>
+                </section>
+                <div class="section-content">
+                    <form class="form contact-form" action="mailto:afuwa.abasi25@my.northampton.ac.uk" target="_blank"
+                        method="get" enctype="multipart/form-data">
+                        <div class="form-row contact-form-row col2">
+                            <div class="form-row-col contact-form-row-col">
+                                <p class="form-label"><label for="fname">First name<span
+                                            class="form-required-asterisk">*</span></label></p>
+                                <input class="form-input" type="text" id="fname" name="fname" placeholder="Emily"
+                                    required>
+                            </div>
+                            <div class="form-row-col contact-form-row-col">
+                                <p class="form-label"><label for="lname">Last name<span
+                                            class="form-required-asterisk">*</span></label></p>
+                                <input class="form-input" type="text" id="lname" name="lname" placeholder="Jones">
+                            </div>
+                        </div>
+                        <div class="form-row contact-form-row col2">
+                            <div class="form-row-col contact-form-row-col">
+                                <p class="form-label"><label for="country">Country of residence<span
+                                            class="form-required-asterisk">*</span></label></p>
+                                <select name="country" id="country">
+                                    <option value="af">Afghanistan</option>
+                                    <option value="al">Albania</option>
+                                    <option value="dz">Algeria</option>
+                                    <option value="ad">Andorra</option>
+                                    <option value="ao">Angola</option>
+                                    <option value="ag">Antigua and Barbuda</option>
+                                    <option value="ar">Argentina</option>
+                                    <option value="am">Armenia</option>
+                                    <option value="au">Australia</option>
+                                    <option value="at">Austria</option>
+                                    <option value="az">Azerbaijan</option>
+                                    <option value="bs">Bahamas</option>
+                                    <option value="bh">Bahrain</option>
+                                    <option value="bd">Bangladesh</option>
+                                    <option value="bb">Barbados</option>
+                                    <option value="by">Belarus</option>
+                                    <option value="be">Belgium</option>
+                                    <option value="bz">Belize</option>
+                                    <option value="bj">Benin</option>
+                                    <option value="bt">Bhutan</option>
+                                    <option value="bo">Bolivia</option>
+                                    <option value="ba">Bosnia and Herzegovina</option>
+                                    <option value="bw">Botswana</option>
+                                    <option value="br">Brazil</option>
+                                    <option value="bn">Brunei Darussalam</option>
+                                    <option value="bg">Bulgaria</option>
+                                    <option value="bf">Burkina Faso</option>
+                                    <option value="bi">Burundi</option>
+                                    <option value="cv">Cabo Verde</option>
+                                    <option value="kh">Cambodia</option>
+                                    <option value="cm">Cameroon</option>
+                                    <option value="ca">Canada</option>
+                                    <option value="cf">Central African Republic</option>
+                                    <option value="td">Chad</option>
+                                    <option value="cl">Chile</option>
+                                    <option value="cn">China</option>
+                                    <option value="co">Colombia</option>
+                                    <option value="km">Comoros</option>
+                                    <option value="cg">Congo</option>
+                                    <option value="cr">Costa Rica</option>
+                                    <option value="hr">Croatia</option>
+                                    <option value="cu">Cuba</option>
+                                    <option value="cy">Cyprus</option>
+                                    <option value="cz">Czechia</option>
+                                    <option value="ci">Côte d'Ivoire</option>
+                                    <option value="dk">Denmark</option>
+                                    <option value="dj">Djibouti</option>
+                                    <option value="dm">Dominica</option>
+                                    <option value="do">Dominican Republic</option>
+                                    <option value="ec">Ecuador</option>
+                                    <option value="eg">Egypt</option>
+                                    <option value="sv">El Salvador</option>
+                                    <option value="gq">Equatorial Guinea</option>
+                                    <option value="er">Eritrea</option>
+                                    <option value="ee">Estonia</option>
+                                    <option value="sz">Eswatini</option>
+                                    <option value="et">Ethiopia</option>
+                                    <option value="fj">Fiji</option>
+                                    <option value="fi">Finland</option>
+                                    <option value="fr">France</option>
+                                    <option value="ga">Gabon</option>
+                                    <option value="gm">Gambia</option>
+                                    <option value="ge">Georgia</option>
+                                    <option value="de">Germany</option>
+                                    <option value="gh">Ghana</option>
+                                    <option value="gr">Greece</option>
+                                    <option value="gd">Grenada</option>
+                                    <option value="gt">Guatemala</option>
+                                    <option value="gn">Guinea</option>
+                                    <option value="gw">Guinea-Bissau</option>
+                                    <option value="gy">Guyana</option>
+                                    <option value="ht">Haiti</option>
+                                    <option value="hn">Honduras</option>
+                                    <option value="hu">Hungary</option>
+                                    <option value="is">Iceland</option>
+                                    <option value="in">India</option>
+                                    <option value="id">Indonesia</option>
+                                    <option value="iq">Iraq</option>
+                                    <option value="ie">Ireland</option>
+                                    <option value="il">Israel</option>
+                                    <option value="it">Italy</option>
+                                    <option value="jm">Jamaica</option>
+                                    <option value="jp">Japan</option>
+                                    <option value="jo">Jordan</option>
+                                    <option value="kz">Kazakhstan</option>
+                                    <option value="ke">Kenya</option>
+                                    <option value="ki">Kiribati</option>
+                                    <option value="kw">Kuwait</option>
+                                    <option value="kg">Kyrgyzstan</option>
+                                    <option value="la">Lao</option>
+                                    <option value="lv">Latvia</option>
+                                    <option value="lb">Lebanon</option>
+                                    <option value="ls">Lesotho</option>
+                                    <option value="lr">Liberia</option>
+                                    <option value="ly">Libya</option>
+                                    <option value="li">Liechtenstein</option>
+                                    <option value="lt">Lithuania</option>
+                                    <option value="lu">Luxembourg</option>
+                                    <option value="mg">Madagascar</option>
+                                    <option value="mw">Malawi</option>
+                                    <option value="my">Malaysia</option>
+                                    <option value="mv">Maldives</option>
+                                    <option value="ml">Mali</option>
+                                    <option value="mt">Malta</option>
+                                    <option value="mh">Marshall Islands</option>
+                                    <option value="mr">Mauritania</option>
+                                    <option value="mu">Mauritius</option>
+                                    <option value="mx">Mexico</option>
+                                    <option value="fm">Micronesia (Federated States of)</option>
+                                    <option value="md">Moldova</option>
+                                    <option value="mc">Monaco</option>
+                                    <option value="mn">Mongolia</option>
+                                    <option value="me">Montenegro</option>
+                                    <option value="ma">Morocco</option>
+                                    <option value="mz">Mozambique</option>
+                                    <option value="mm">Myanmar</option>
+                                    <option value="na">Namibia</option>
+                                    <option value="nr">Nauru</option>
+                                    <option value="np">Nepal</option>
+                                    <option value="nl">Netherlands</option>
+                                    <option value="nz">New Zealand</option>
+                                    <option value="ni">Nicaragua</option>
+                                    <option value="ne">Niger</option>
+                                    <option value="ng">Nigeria</option>
+                                    <option value="mk">North Macedonia</option>
+                                    <option value="no">Norway</option>
+                                    <option value="om">Oman</option>
+                                    <option value="pk">Pakistan</option>
+                                    <option value="pw">Palau</option>
+                                    <option value="pa">Panama</option>
+                                    <option value="pg">Papua New Guinea</option>
+                                    <option value="py">Paraguay</option>
+                                    <option value="pe">Peru</option>
+                                    <option value="ph">Philippines</option>
+                                    <option value="pl">Poland</option>
+                                    <option value="pt">Portugal</option>
+                                    <option value="qa">Qatar</option>
+                                    <option value="ro">Romania</option>
+                                    <option value="ru">Russia</option>
+                                    <option value="rw">Rwanda</option>
+                                    <option value="kn">Saint Kitts and Nevis</option>
+                                    <option value="lc">Saint Lucia</option>
+                                    <option value="vc">Saint Vincent and the Grenadines</option>
+                                    <option value="ws">Samoa</option>
+                                    <option value="sm">San Marino</option>
+                                    <option value="st">Sao Tome and Principe</option>
+                                    <option value="sa">Saudi Arabia</option>
+                                    <option value="sn">Senegal</option>
+                                    <option value="rs">Serbia</option>
+                                    <option value="sc">Seychelles</option>
+                                    <option value="sl">Sierra Leone</option>
+                                    <option value="sg">Singapore</option>
+                                    <option value="sk">Slovakia</option>
+                                    <option value="si">Slovenia</option>
+                                    <option value="sb">Solomon Islands</option>
+                                    <option value="so">Somalia</option>
+                                    <option value="za">South Africa</option>
+                                    <option value="kr">South Korea</option>
+                                    <option value="ss">South Sudan</option>
+                                    <option value="es">Spain</option>
+                                    <option value="lk">Sri Lanka</option>
+                                    <option value="sd">Sudan</option>
+                                    <option value="sr">Suriname</option>
+                                    <option value="se">Sweden</option>
+                                    <option value="ch">Switzerland</option>
+                                    <option value="sy">Syria</option>
+                                    <option value="tj">Tajikistan</option>
+                                    <option value="tz">Tanzania</option>
+                                    <option value="th">Thailand</option>
+                                    <option value="tl">Timor-Leste</option>
+                                    <option value="tg">Togo</option>
+                                    <option value="to">Tonga</option>
+                                    <option value="tt">Trinidad and Tobago</option>
+                                    <option value="tn">Tunisia</option>
+                                    <option value="tr">Turkey</option>
+                                    <option value="tm">Turkmenistan</option>
+                                    <option value="tv">Tuvalu</option>
+                                    <option value="ug">Uganda</option>
+                                    <option value="ua">Ukraine</option>
+                                    <option value="ae">United Arab Emirates</option>
+                                    <option value="gb">United Kingdom</option>
+                                    <option value="us">United States</option>
+                                    <option value="uy">Uruguay</option>
+                                    <option value="uz">Uzbekistan</option>
+                                    <option value="vu">Vanuatu</option>
+                                    <option value="ve">Venezuela</option>
+                                    <option value="vn">Vietnam</option>
+                                    <option value="ye">Yemen</option>
+                                    <option value="zm">Zambia</option>
+                                    <option value="zw">Zimbabwe</option>
+                                </select>
+                            </div>
+                            <div class="form-row-col contact-form-row-col">
+                                <fieldset class="form-radio">
+                                    <legend class="form-label">Type of enquiry?<span
+                                            class="form-required-asterisk">*</span></legend>
+                                    <div class="form-radio-option">
+                                        <input type="radio" name="enq-type" id="dev2dev" value="dev2dev" required>
+                                        <label for="dev2dev">Developer-to-developer</label>
+                                    </div>
+                                    <div class="form-radio-option">
+                                        <input type="radio" name="enq-type" id="business" value="business" required>
+                                        <label for="business">Business</label>
+                                    </div>
+                                    <div class="form-radio-option">
+                                        <input type="radio" name="enq-type" id="personal" value="personal" required>
+                                        <label for="personal">Personal</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div class="form-row contact-form-row">
+                            <p class="form-label"><label for="email">Email<span
+                                        class="form-required-asterisk">*</span></label></p>
+                            <input class="form-input" type="email" id="email" name="email"
+                                placeholder="emily.jones@example.com" required>
+                        </div>
+                        <div class="form-row contact-form-row">
+                            <p class="form-label"><label for="subject">Subject<span
+                                        class="form-required-asterisk">*</span></label></p>
+                            <input class="form-input" type="text" id="subject" name="subject"
+                                placeholder="[NEW CLIENT] Struggling with Designing My Director Portfolio" required>
+                        </div>
+                        <div class="form-row contact-form-row">
+                            <p class="form-label"><label for="mbody">Body</label></p>
+                            <textarea class="form-input" name="mbody" id="mbody" autocapitalize="on" autocorrect="on"
+                                placeholder="Hello Affie, 
+
+I found your web design services via Google..."></textarea>
+                        </div>
+
+                        <div class="form-row contact-form-row col2">
+                            <p class="form-row-col contact-form-row-col"><span
+                                    class="form-required-asterisk">*</span>Required</p>
+                            <div class="form-row-col contact-form-row-col">
+                                <span>
+                                    <input type="checkbox" name="robot" id="robot" required>
+                                    <label for="robot">I am not a robot.<span
+                                            class="form-required-asterisk">*</span></label>
+                                </span>
+                            </div>
+                        </div>
+                        <input type="submit" id="submit" value="Submit">
+                    </form>
+                </div>
+            </main>
+            <!-- ***
+                 Footer
+                ******** -->
+            <footer>
+                <div class="footer-row">
+                    <ul class="footer-row-col social-media-links">
+                        <li class="social-media-link"><a href="https://github.com/lissymeaner" target="_blank"
+                                rel="noopener" title="GitHub" class="icon icon-github"><i class="fa-brands fa-github"></i></a></li>
+                        <li class="social-media-link"><a href="https://www.instagram.com/lissymeaner" target="_blank"
+                                rel="noopener" title="Instagram" class="icon icon-ig"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li class="social-media-link"><a href="https://www.linkedin.com/in/mamjoonie/" target="_blank"
+                                rel="noopener" title="LinkedIn" class="icon icon-linkedin"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    </ul>
+                    <ul class="footer-row-col necessary-links">
+                        <li class="necessary-link"><a href="#">Cookies</a></li>
+                        <li class="necessary-link"><a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+                <p class="copyright-notice-footer">Handcrafted by me, &copy; Affie 2026</p>
+            </footer>
+            <div class="btn btn-scroll-to-top" title="Scroll to top"><a href="#" aria-label="Scroll to top"><svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path
+                            d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464a256 256 0 1 0 0-512 256 256 0 1 0 0 512zm11.3-387.3c-6.2-6.2-16.4-6.2-22.6 0l-104 104c-4.6 4.6-5.9 11.5-3.5 17.4s8.3 9.9 14.8 9.9l72 0 0 104c0 13.3 10.7 24 24 24l16 0c13.3 0 24-10.7 24-24l0-104 72 0c6.5 0 12.3-3.9 14.8-9.9s1.1-12.9-3.5-17.4l-104-104z" />
+                    </svg></a></div>
+        </div>
+    </div>
+</body>
+
+</html>

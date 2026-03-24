@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- **********************************************************************
+     ******************************** HEAD ********************************
+     ********************************************************************** -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affie</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+    <!-- This overlap is intentional, as the next two files below were split from
+     'responsive.css'. Note that some desktop features are suitable for larger mobile
+     screens. -->
+    <link rel="stylesheet" href="desktop.css" media="screen and (min-width:768px)">
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width:1024px)">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="dark.css" media="screen and (prefers-color-scheme:dark)">
+    <script src="https://kit.fontawesome.com/fb591d1f4c.js" crossorigin="anonymous"></script>
+</head>
+
+<!-- **********************************************************************
+     ******************************** BODY ********************************
+     ********************************************************************** -->
+
+<body id="home">
+    <div class="container">
+        <!-- ********************************
+             Aside (to the left side on desktop)
+            ************************************* -->
+        <aside>
+            <!-- Navigation bar -->
+            <div class="navbar">
+                <span class="logo current">Affie</span>
+                <a class="btn nav-button-show" href="#home" aria-label="Open navigation"></a>
+                <a class="btn nav-button-hide" href="#" aria-label="Close navigation"></a>
+            </div>
+            <!-- ******************
+                 Navigation menu (nav)
+                *********************** -->
+            <nav>
+                <ul>
+                    <li id="home_nav">
+                        <span class="current-page">Home</span>
+                        <ul>
+                            <li><a href="#about">About Me</a></li>
+                            <li><a href="#projects">My Projects</a></li>
+                            <li><a href="#posts">My Posts</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="project.html">My Work</a></li>
+                    <li id="report_nav">
+                        <a href="report.html">Report</a>
+                        <ul>
+                            <li><a href="report.html#reflection">Reflection</a></li>
+                            <li><a href="report.html#design">Design Decisions</a></li>
+                            <li><a href="report.html#validation">Validation Reports</a></li>
+                            <li><a href="report.html#video">Video Demo</a></li>
+                            <li><a href="report.html#references">References</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="videoDemo.html">Video Demo</a></li>
+                    <!-- Hidden nav item to avoid submenu background colour from
+                     clipping into <aside>. DO NOT REMOVE. -->
+                    <li>&nbsp;</li>
+                    <li><a href="contact.html" title="Contact me by clicking this button!" class="btn btn-contact">Say
+                            Hi!</a></li> <!-- (Farley, 2022) -->
+                </ul>
+            </nav>
+            <p class="copyright-notice-aside">&copy; Affie 2026</p>
+        </aside> <!-- (Jeznach, 2019) -->
+        <!-- ******************************************************************
+             Container for header, main, and footer (to the right side on desktop)
+             **********************************************************************-->
+        <div class="content-container">
+            <!-- Video backgrounds -->
+            <video class="bg-video-light" src="media/img/bg-00-index-light.mp4" playsinline autoplay muted loop></video>
+            <!-- (Coyier, 2017) -->
+            <video class="bg-video-dark" src="media/img/bg-00-index-dark.mp4" playsinline autoplay muted loop></video>
+            <!-- (Coyier, 2017) -->
+            <!-- ***
+                 Header
+                ******** -->
+            <header id="header">
+                <h1 class="bio">Full Stack Dev, Designer, Consultant</h1>
+                <h2 class="tagline">I develop responsive and optimised websites for small/medium-sized businesses -
+                    static or dynamic. Available for freelancing with high-quality, continual support.</h2>
+            </header>
+            <!-- *
+                 Main
+                 ***** -->
+            <main>
+                <!-- For each section, the ID must be the same as or a similar name to the heading -->
+                <section id="about">
+                    <h2>About Me</h2>
+                    <p>In case it wasn't obvious, I'm Affie, or Fie. Welcome. I'm a freelance web developer hailing from
+                        the U.K. and a first-year CS student at Northampton. I specialise in making multi-page, fully
+                        secure websites using platforms such as Shopify and WordPress. With full client support and
+                        enhanced security.</p>
+                    <p>Professionally, I would love to get in touch with every single viewer that visits my website -
+                        not that many have questions, I find. However, if you have any, feel free to contact me by
+                        clicking <a href="contact.html">here</a>, the hamburger menu on top, or on the nav bar, if
+                        you're on desktop.</p>
+                </section>
+                <div class="section-content">
+                </div>
+                <section id="projects">
+                    <h2>My Projects</h2>
+                    <p>Below is a list of some of my professional projects. They're all websites, each with a flair
+                        distinct to one another.</p>
+                </section>
+                <div class="section-content">
+                    <!-- This projects list goes through some of my projects in a mixed order -->
+                    <div class="card-grid projects">
+                        <!-- Hudascakes -->
+                        <div class="card project-card">
+                            <div class="figure-in-card image is-3by2">
+                                <img class="project-logo-thumb" src="media/img/3x2-00-hudascakes-logo.png"
+                                    alt="Hudascakes logo">
+                                <div class="project-caption">
+                                    <h3 class="project-desc">Well-crafted soft bakery goods from FoodTok-famous cake
+                                        artist named Huda.</h3>
+                                    <a href="#" class="btn is-visit"><span>Visit Website</span><span
+                                            class="icon icon-rchevron">&gt;</span></a>
+                                </div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <!-- Jo Handy's Repair -->
+                        <div class="card project-card">
+                            <div class="figure-in-card image is-3by2">
+                                <img class="project-logo-thumb" src="media/img/3x2-01-jo-logo.png"
+                                    alt="Jo Handy's Repair logo">
+                                <div class="project-caption">
+                                    <h3 class="project-desc">No-nonsense one-page portfolio of Joanne Handemann's
+                                        excellent handyman services.</h3>
+                                    <a href="#" class="btn is-visit"><span>Visit Website</span><span
+                                            class="icon icon-rchevron">&gt;</span></a>
+                                </div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <!-- Akuma Bank -->
+                        <div class="card project-card">
+                            <div class="figure-in-card image is-3by2">
+                                <img class="project-logo-thumb" src="media/img/3x2-02-akuma-logo.png"
+                                    alt="Akuma Bank logo">
+                                <div class="project-caption">
+                                    <h3 class="project-desc">The UK's most-trusted digital bank since Starling.</h3>
+                                    <a href="#" class="btn is-visit"><span>Visit Website</span><span
+                                            class="icon icon-rchevron">&gt;</span></a>
+                                </div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <!-- Inklywood -->
+                        <div class="card project-card">
+                            <div class="figure-in-card image is-3by2">
+                                <img class="project-logo-thumb" src="media/img/3x2-03-inklywood-logo.png"
+                                    alt="Inklywood logo">
+                                <div class="project-caption">
+                                    <h3 class="project-desc">Ultimate go-to database for browsing and viewing accurate
+                                        entries of a celeb's tattoos.</h3>
+                                    <a href="#" class="btn is-visit"><span>Visit Website</span><span
+                                            class="icon icon-rchevron">&gt;</span></a>
+                                </div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <!-- Dryyy Baseball Caps -->
+                        <div class="card project-card">
+                            <div class="figure-in-card image is-3by2">
+                                <img class="project-logo-thumb" src="media/img/3x2-04-dryyy-logo.png"
+                                    alt="Dryyy Baseball Caps logo">
+                                <div class="project-caption">
+                                    <h3 class="project-desc">Top-quality entrepreneurial brand of baseball caps manned
+                                        by two ex-Sainsbury's stylists.</h3>
+                                    <a href="#" class="btn is-visit"><span>Visit Website</span><span
+                                            class="icon icon-rchevron">&gt;</span></a>
+                                </div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <!-- HUNTR/XP -->
+                        <div class="card project-card">
+                            <div class="figure-in-card image is-3by2">
+                                <img class="project-logo-thumb" src="media/img/3x2-05-huntrxp-logo.png"
+                                    alt="HUNTR/XP logo">
+                                <div class="project-caption">
+                                    <h3 class="project-desc">Shorty-winning health and fitness podcast run by three
+                                        ex-demon hunters of HUNTR/X.</h3>
+                                    <a href="#" class="btn is-visit"><span>Visit Website</span><span
+                                            class="icon icon-rchevron">&gt;</span></a>
+                                </div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <a href="project.html" class="btn is-project-or-post"><span>See more projects</span><span
+                                class="icon icon-rchevron">&gt;</span></a>
+                    </div> <!-- (Farley, 2022) -->
+                </div>
+                <section id="posts">
+                    <h2>Posts</h2>
+                    <p>Below is a list of the most recent of many articles that I post on this website now and then.</p>
+                </section>
+                <div class="section-content">
+                    <div class="card-grid posts">
+                        <div class="card post-preview-card">
+                            <a href="#">
+                                <figure class="image is-3by2">
+                                    <img class="post-preview-image-thumb" src="media/img/3x2-post-00.png"
+                                        alt="Exhausted developer at a workstation in a dark room">
+                                    <figcaption>
+                                        <h3 class="post-title">Dev Fatigue and How to Combat This Phenomenon</h3>
+                                        <p class="post-desc">Fatigue is one of the most common causes of inactivity in
+                                            web and software dev. I outline an effective treatment for this problem in
+                                            this article.</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="card post-preview-card">
+                            <a href="#">
+                                <figure class="image is-3by2">
+                                    <img class="post-preview-image-thumb" src="media/img/3x2-post-01.png" alt="FAQs">
+                                    <figcaption>
+                                        <h3 class="post-title"
+                                            title='"Which Languages Should I Choose to Learn for My Web Dev Services?": Commonly Asked Questions about Web Dev Freelancing'>
+                                            FAQs about Web Dev Freelancing</h3>
+                                        <p class="post-desc">I list all of my answers for some of the most frequently
+                                            asked questions that my readers have sent me via comments, email and
+                                            socials.</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="card post-preview-card">
+                            <a href="#">
+                                <figure class="image is-3by2">
+                                    <img class="post-preview-image-thumb" src="media/img/3x2-post-02.png"
+                                        alt='Worker touching a "AI Search" bar hologram, while on their laptop'>
+                                    <figcaption>
+                                        <h3 class="post-title"
+                                            title="If You Really Want to Maximise Your Website's SEO, Learn How AI Searches Work (2026)">
+                                            How to Maximise Your Website's SEO with AI</h3>
+                                        <p class="post-desc">Are you tired of these SEO courses that will show you the
+                                            fundamentals, but feel like they're outdated? No mention of AI, anywhere?
+                                            You are in danger.</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="card post-preview-card">
+                            <a href="#">
+                                <figure class="image is-3by2">
+                                    <img class="post-preview-image-thumb" src="media/img/3x2-post-03.png"
+                                        alt="Two differently coloured knight chess pieces facing each other">
+                                    <figcaption>
+                                        <h3 class="post-title"
+                                            title="Competition is a Skill That is Crucial to Your Business' Growth">
+                                            Befriend Competition If You Want Business Growth</h3>
+                                        <p class="post-desc">This article will reframe competitors in a way for you that
+                                            will boost your confidence in your own business.</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="card post-preview-card">
+                            <a href="#">
+                                <figure class="image is-3by2">
+                                    <img class="post-preview-image-thumb" src="media/img/3x2-post-04.png"
+                                        alt="Freelance Pricing Models">
+                                    <figcaption>
+                                        <h3 class="post-title"
+                                            title="7 Effective Pricing Models for Your Web Dev Freelance Services as a Beginner">
+                                            7 Effective Pricing Models for Web Dev Freelancers</h3>
+                                        <p class="post-desc">Some freelance businesses will have subscriptions, and some
+                                            one-off purchases, yet how are they all making money? Find out in this
+                                            article.</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="card post-preview-card">
+                            <a href="#">
+                                <figure class="image is-3by2">
+                                    <img class="post-preview-image-thumb" src="media/img/3x2-post-05.png"
+                                        alt="Volunteer">
+                                    <figcaption>
+                                        <h3 class="post-title"
+                                            title="Volunteering: A Charitable Way to Build Credibility as a Novice Freelancer">
+                                            Try Volunteering Before You Start Freelancing</h3>
+                                        <p class="post-desc">Have no work experience? Some time to spend, perhaps? Do
+                                            you feel emotionally stunted even with the hard skills down? Try digital
+                                            volunteering.</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <a href="#" class="btn is-project-or-post"><span>See more projects</span><span
+                                class="icon icon-rchevron">&gt;</span></a>
+                    </div>
+                </div>
+                <section id="testimonials">
+                    <h2>Testimonials</h2>
+                    <p>Some of my clients have been kind enough to send some kind words for my service and rate them.
+                        Below are some of their reviews.</p>
+                </section>
+                <div class="section-content">
+                    <ul class="testimonials-list">
+                        <li class="testimonial-li">
+                            <div class="testimonial-li-content">
+                                <img class="testimonial-sender-photo"
+                                    src="media/img/1x1-testimonial-rep-00-hudascakes.png" alt="Huda portrait">
+                                <h3 class="testimonial-summary"><span class="testimonial-quote">"Fastest support I've
+                                        ever experienced"</span> - Huda, owner of Hudascakes</h3>
+                                <div class="star-rating5">
+                                    <span class="icon icon-star">star</span><span
+                                        class="icon icon-star">star</span><span class="icon icon-star">star</span><span
+                                        class="icon icon-star">star</span><span class="icon icon-star">star</span>
+                                </div>
+                                <p class="testimonial-desc">Behind your FYP, I'm constantly baking, posting, taking
+                                    calls, emails and texts from sponsors. This means I won't have time to check my
+                                    website. Though I don't have to worry about this, since I always have Affie to take
+                                    care of my shop. The support feels like 24/7, even though it's not; I never have to
+                                    wait for any updates or add anything myself to some database, making me a more
+                                    productive person.</p>
+                                <p class="testimonial-desc">She's also very attentive and truly listens beyond what you
+                                    are saying, so the quality of my site is top-notch because she's made it feel like
+                                    'me'. That is someone that I trust.</p>
+                            </div>
+                        </li>
+                        <li class="testimonial-li">
+                            <div class="testimonial-li-content">
+                                <img class="testimonial-sender-photo"
+                                    src="media/img/1x1-testimonial-rep-01-inklywood.png" alt="Jane Margolis portrait">
+                                <h3 class="testimonial-summary"><span class="testimonial-quote">"A friendly, trustworthy
+                                        keeper"</span> - Jane Margolis, webmaster at Inklywood</h3>
+                                <div class="star-rating5">
+                                    <span class="icon icon-star">star</span><span
+                                        class="icon icon-star">star</span><span class="icon icon-star">star</span><span
+                                        class="icon icon-star">star</span><span class="icon icon-star">star</span>
+                                </div>
+                                <p class="testimonial-desc">Before discovering Affie in 2024, I had been running the
+                                    Inklywood database for over 15 years with little feedback. My user base was
+                                    complaining that the site had looked the same since 2014, despite there being new
+                                    entries to the website almost every week.</p>
+                                <p class="testimonial-desc">The Inklywood team were simply two WordPress no-code
+                                    evangelists, so we just outsourced to different web devs, most of whom came with
+                                    sloppy communication. So, there were sloppy solutions.</p>
+                                <p class="testimonial-desc">I decided to turn the brand around and contacted Affie for
+                                    advice on how to revamp this virtually dead website. She suggested that our team
+                                    'upskill in Web Dev' and 'hire new contributors, editors', etc. 2 years onwards,
+                                    we're on an annual contract with her.</p>
+                            </div>
+                        </li>
+                        <li class="testimonial-li">
+                            <div class="testimonial-li-content">
+                                <img class="testimonial-sender-photo"
+                                    src="media/img/1x1-testimonial-rep-02-mezzopiano.png" alt="Giulia Rossi portrait">
+                                <h3 class="testimonial-summary"><span class="testimonial-quote">"Reasonable price, high
+                                        rewards"</span> - Giulia Rossi, commercial director at Mezzopiano</h3>
+                                <div class="star-rating5">
+                                    <span class="icon icon-star">star</span><span
+                                        class="icon icon-star">star</span><span class="icon icon-star">star</span><span
+                                        class="icon icon-star">star</span><span class="icon icon-star">star</span>
+                                </div>
+                                <p class="testimonial-desc">At the time, we were rebranding. I remember reaching out to
+                                    Affie back in late 2022, after our family business fell into so many scams by these
+                                    web dev businesses and cheap freelancers. So it shocked me that she was legitimate.
+                                </p>
+                                <p class="testimonial-desc">When she delivered our four-page menu website, I was
+                                    surprised by how stylish yet fast and functional it all was. It is amazing how a
+                                    single website, in 2023, could make a family business grow from a horror house of
+                                    debts to a profit machine. To this day, she makes sure to maintain our site on a
+                                    monthly basis.</p>
+                                <p class="testimonial-desc">To this day, she makes sure to maintain our site on a
+                                    monthly basis.</p>
+                            </div>
+                        </li>
+                        <li class="testimonial-li">
+                            <div class="testimonial-li-content">
+                                <img class="testimonial-sender-photo" src="media/img/1x1-testimonial-rep-03-pipi.png"
+                                    alt="Henry Guts portrait">
+                                <h3 class="testimonial-summary"><span class="testimonial-quote">"Delivers with 100%
+                                        security, 0% bloatware plugins/apps"</span> - Henry Guts, IT Department Manager
+                                    at Pipi Rocks</h3>
+                                <div class="star-rating5">
+                                    <span class="icon icon-star">star</span><span
+                                        class="icon icon-star">star</span><span class="icon icon-star">star</span><span
+                                        class="icon icon-star">star</span><span class="icon icon-star">star</span>
+                                </div>
+                                <p class="testimonial-desc">Our company recently moved from WooCommerce to Shopify after
+                                    we'd been hacked twice there. The reputation was starting to wane slightly, and we
+                                    had recently lost our best consultant after the data breach scandal. We were
+                                    relentlessly mocked.</p>
+                                <p class="testimonial-desc">Our web developers knew about this new platform and how to
+                                    migrate the database over there; however, we were unsure of what apps to use. Our
+                                    system is fairly complex, and it takes the right type of communication to work with
+                                    it.</p>
+                                <p class="testimonial-desc">In our first consultation call back in September, Affie
+                                    suggested that we invest in a unified security app so attacks like before do not
+                                    happen again. She was also a complete outsider to the mineral industry, so she was
+                                    able to give some feedback from an outsider's point of view on how to make the shop
+                                    more intuitive for first-time buyers who might be new to the hobby of collecting
+                                    rocks.</p>
+                                <p class="testimonial-desc">She knows exactly how to make the perfect ecommerce
+                                    experience. I would definitely recommend her freelance services to anyone.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </main>
+            <!-- ***
+                 Footer
+                ******** -->
+            <footer>
+                <div class="footer-row">
+                    <ul class="footer-row-col social-media-links">
+                        <li class="social-media-link"><a href="https://github.com/lissymeaner" target="_blank"
+                                rel="noopener" title="GitHub" class="icon icon-github"><i class="fa-brands fa-github"></i></a></li>
+                        <li class="social-media-link"><a href="https://www.instagram.com/lissymeaner" target="_blank"
+                                rel="noopener" title="Instagram" class="icon icon-ig"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li class="social-media-link"><a href="https://www.linkedin.com/in/mamjoonie/" target="_blank"
+                                rel="noopener" title="LinkedIn" class="icon icon-linkedin"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    </ul>
+                    <ul class="footer-row-col necessary-links">
+                        <li class="necessary-link"><a href="#">Cookies</a></li>
+                        <li class="necessary-link"><a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+                <p class="copyright-notice-footer">Handcrafted by me, &copy; Affie 2026</p>
+            </footer>
+            <div class="btn btn-scroll-to-top" title="Scroll to top"><a href="#" aria-label="Scroll to top"><svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path
+                            d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464a256 256 0 1 0 0-512 256 256 0 1 0 0 512zm11.3-387.3c-6.2-6.2-16.4-6.2-22.6 0l-104 104c-4.6 4.6-5.9 11.5-3.5 17.4s8.3 9.9 14.8 9.9l72 0 0 104c0 13.3 10.7 24 24 24l16 0c13.3 0 24-10.7 24-24l0-104 72 0c6.5 0 12.3-3.9 14.8-9.9s1.1-12.9-3.5-17.4l-104-104z" />
+                    </svg></a></div>
+        </div>
+    </div>
+</body>
+
+</html>
