@@ -95,12 +95,6 @@ nav {
     justify-content:space-around;
 }
 
-#home_nav:hover a:not(#home_nav ul li a), #home_nav:hover span,
-#report_nav:hover a:not(#report_nav ul li a), #report_nav:hover span{
-    padding-bottom: 2.25rem;
-    display: inline-block;
-}
-
 nav ul li:not(nav ul li ul li):not(:last-child) {
     display: block;
     padding: 2.5rem 0 2.5rem 0;
@@ -196,11 +190,6 @@ header{
     width: 100%;
 }
 
-/* Classes only found in report.html */
-
-.word-document{
-    padding: 6rem;
-}
 /* END OF */
 
 /*************************************************************
@@ -280,32 +269,13 @@ label{
                         MEDIA CONTENT
 *************************************************************/
 
-/* Classes only found in report.html */
-
 .is-picture{
     height: 8vw;
     padding: 0;
     margin: 0;
 }
 
-.word-document .list.image-list-3 img.is-picture.is-picture-150, .word-document .list.image-list-3 img.is-picture.is-picture-200 {
-    width: 100%;
-    height: auto !important;
-}
-/* END OF */
-
-
-/* Adjusting element looks based on screen width (960px, 768px, 512px, 480px, and 396px) */
-
-@media screen and (max-width:960px) {
-    .word-document .list.image-list-3:has(.image.is-16by9 img.is-picture.is-picture-200){
-        grid-template-columns: 1fr;
-    }
-    
-    .word-document .list.image-list-3:has(.image.is-16by9 img.is-picture.is-picture-200) li:nth-child(2n+1):is(:last-child){
-        grid-column: unset;
-    }
-}
+/* Adjusting element looks based on screen width (768px, 512px, 480px, and 396px) */
 
 @media screen and (max-width:768px) {
     /*************************************************************
@@ -332,19 +302,6 @@ label{
         margin: 0;
     } /* (Abasi, 2025a) */
     
-    /* Classes only found in report.html */
-    
-    main:has(.word-document){
-        padding: 0;
-    }
-    
-    .word-document{
-        padding: 6rem 4rem;
-    }
-    
-    .word-document .list.image-list-3:has(img.is-picture.is-picture-200){
-        grid-template-columns: 1fr;
-    }
     /* END OF */
     
     /*************************************************************
@@ -379,14 +336,10 @@ label{
         margin:0;
     }
 
-    .image.is-picture{
+    .is-picture{
         height: 3vw;
         padding: 0;
         margin: 0;
-    }
-
-    .word-document{
-        padding: 6rem 2rem;
     }
 }
 
@@ -428,10 +381,6 @@ label{
     
     main > .section-content:last-child{
         padding: 0 1.5rem 9rem;
-    }
-
-    .word-document{
-        padding: 6rem 1.5rem;
     }
 }
 /* END OF */

@@ -88,7 +88,7 @@ nav ul li:not(:last-child, :nth-last-child(2)):hover > a, nav ul li ul li:hover 
 }
 
 /* Green text glow effect */
-section:not(.word-document section) > *:is(h1, h2){
+section > *:is(h1, h2){
     color: var(--b);
     text-shadow: 0 0 .5rem var(--secondary-00), 0 0 3rem var(--primary-02);
 }

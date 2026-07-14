@@ -236,7 +236,7 @@ footer {
     margin-bottom: 3rem;
 }
 
-/* Classes only found in videoDemo.html */
+/* Videos */
 
 .video-frame{
     max-width:800px;
@@ -264,7 +264,7 @@ iframe{
     margin-top: 2rem;
 }
 
-/* .word-document specific classes, only in report.html */
+/* Image styling classes (framed or frameless, and floating left or right) */
 
 .framed{
     border: .1rem solid var(--g);
@@ -300,20 +300,6 @@ iframe{
     float: none;
 }
 
-.image-list-3{
-    display: grid;
-    list-style-type: none;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 0;
-    width: 100%;
-    column-gap: 2rem;
-}
-
-.image-list-3 li{
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
 /* END OF */
 
 /*************************************************************
@@ -425,41 +411,7 @@ fieldset {
     padding-inline: 0;
 }
 
-/* .word-document and other related elements and classes,
-only in report.html */
-
-.word-document{
-    padding: 6rem;
-}
-
-.word-document section, .word-document section + .section-content,
-.word-document section + .section-content ~ section:has(h2) {
-    padding: 0;
-    line-height: 1.5;
-}
-
-.heading, .heading-2, .heading-3{
-    color: #0F4761;
-}
-
-section + section > .heading, .section-content + section > .heading{
-    padding-top: 3rem;
-}
-
-.word-document a{
-    color: #00A7FF;
-    text-decoration: underline;
-}
-
-.normal, .list{
-    color: var(--b);
-    padding-bottom: 1.2em;
-}
-
-.list{
-    margin-left: .3rem;
-    margin-inline-start:  .3rem;
-}
+/* Image-related elements and classes */
 
 .picture-left > figcaption, .picture-center > figcaption, .picture-right > figcaption{
     margin: 0;
@@ -639,20 +591,18 @@ input[type="submit"]{
     display: inline-block;
 } /* (Abasi, 2025b) */
 
-/* .word-document specific class, only in report.html */
-
 .is-picture{
     height: 5rem;
     padding: 0;
     margin: 0;
 }
 
-/* 150% of 5rem, original height for all .word-document pictures */
+/* 150% of 5rem, original height for all .is-picture images */
 .is-picture-150 {
     height: 7.5rem;
 }
 
-/* 200% of 5rem, original height for all .word-document pictures */
+/* 200% of 5rem, original height for all .is-picture images */
 .is-picture-200 {
     height: 10rem;
 }

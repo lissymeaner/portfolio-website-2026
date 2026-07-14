@@ -99,44 +99,6 @@ p {
     text-align: center;
 }
 
-/* .word-document specific classes, only in report.html */
-
-.word-document,
-.word-document h1, .word-document h2, .word-document h3,
-.word-document h4, .word-document h5, .word-document h6,
-.word-document p{
-    font-family: 'Aptos', 'Calibri', 'Trebuchet MS', sans-serif !important;
-}
-
-.word-document figcaption{
-    font-size: .8rem;
-    line-height: initial;
-}
-
-.normal, .list{
-    overflow-wrap: anywhere;
-}
-
-.heading, .heading-2, .heading-3{
-    font-weight: normal;
-}
-
-.heading{
-    font-size: 2rem;
-}
-
-.heading-2{
-    font-size: 1.5rem;
-}
-
-.heading-3{
-    font-size: 1.25rem;
-}
-
-.italic{
-    font-style: italic;
-}
-
 /*************************************************************
                             INPUT
 *************************************************************/
